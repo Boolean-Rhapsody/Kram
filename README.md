@@ -1,2 +1,2 @@
 # Kram
-Kram app
+Kram app Ver 1.0
