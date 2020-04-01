@@ -1,0 +1,10 @@
+<ripple
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:color="@color/color_click_overlay">
+
+	<item
+		android:id="@android:id/mask"
+		android:drawable="@drawable/nurse_editing_patient_list_activity_submit_button_background"/>
+
+	<item android:drawable="@drawable/nurse_editing_patient_list_activity_submit_button_background"/>
+</ripple>

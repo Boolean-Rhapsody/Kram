@@ -1,0 +1,124 @@
+<resources>
+	
+	<!-- Project level resources -->
+	<string name="patient_info_page_activity_title">Information</string>
+	<string name="doctor_profile_activity_title">Kram</string>
+	<string name="patient_profile_activity_title">Kram</string>
+	<string name="doctors_update_status_activity_title">Status</string>
+	<string name="doctor_sign_up_activity_title">Kram</string>
+	<string name="home_activity_title">Kram</string>
+	<string name="nurse_input_patient_activity_title">Kram</string>
+	<string name="doctors_update_patient_list_activity_title">Patients</string>
+	<string name="nurse_on_call_doctors_activity_title">Doctors</string>
+	<string name="nurse_doctor_profile_activity_title">Kram</string>
+	<string name="nurse_editing_patient_list_activity_title">Patients</string>
+	<string name="nurse_sign_up_activity_title">Kram</string>
+	<string name="patient_sign_up_activity_title">Kram</string>
+	<string name="app_name">Kram</string>
+	
+	<!-- Resources for PatientProfileActivity -->
+	<string name="patient_profile_activity_you_will_be_seen_sho_text_view_text">You will be seen shortly!</string>
+	<string name="patient_profile_activity_minutes_text_view_hint">minutes.</string>
+	<string name="patient_profile_activity_doctor_button_text">LOGOUT</string>
+	<string name="patient_profile_activity_doctor_button_hint">LOGOUT</string>
+	<string name="patient_profile_activity_you_have_text_view_hint">You have</string>
+	<string name="patient_profile_activity_patients_text_view_hint">patients </string>
+	<string name="patient_profile_activity_in_front_of_you_text_view_hint">in front of you.</string>
+	<string name="patient_profile_activity_in_front_of_you_text_view_text">in front of you.</string>
+	<string name="patient_profile_activity_you_ve_been_waiting_text_view_hint">You’ve been waiting for</string>
+	<string name="patient_profile_activity_patients_text_view_text">patients </string>
+	<string name="patient_profile_activity_you_have_text_view_text">You have</string>
+	<string name="patient_profile_activity_you_will_be_seen_sho_text_view_hint">You will be seen shortly!</string>
+	<string name="patient_profile_activity_minutes_text_view_text">minutes.</string>
+	<string name="patient_profile_activity_you_ve_been_waiting_text_view_text">You’ve been waiting for</string>
+	
+	<!-- Resources for DoctorSignUpActivity -->
+	<string name="doctor_sign_up_activity_password_text_view_text">password</string>
+	<string name="doctor_sign_up_activity_email_text_view_text">email</string>
+	<string name="doctor_sign_up_activity_login_text_view_hint">Login</string>
+	<string name="doctor_sign_up_activity_submit_button_text">SUBMIT</string>
+	<string name="doctor_sign_up_activity_email_text_view_hint">email</string>
+	<string name="doctor_sign_up_activity_login_text_view_text">Login</string>
+	<string name="doctor_sign_up_activity_submit_button_hint">SUBMIT</string>
+	<string name="doctor_sign_up_activity_password_text_view_hint">password</string>
+	
+	<!-- Resources for DoctorsUpdateStatusActivity -->
+	<string name="doctors_update_status_activity_on_call_text_view_hint">on-call</string>
+	<string name="doctors_update_status_activity_submit_button_text">SUBMIT</string>
+	<string name="doctors_update_status_activity_not_on_call_text_view_text">not on-call</string>
+	<string name="doctors_update_status_activity_on_call_text_view_text">on-call</string>
+	<string name="doctors_update_status_activity_not_on_call_text_view_hint">not on-call</string>
+	<string name="doctors_update_status_activity_submit_button_hint">SUBMIT</string>
+	
+	<!-- Resources for NurseInputPatientActivity -->
+	<string name="nurse_input_patient_activity_severity_text_view_text">severity</string>
+	<string name="nurse_input_patient_activity_submit_button_text">SUBMIT</string>
+	<string name="nurse_input_patient_activity_time_text_view_hint">time</string>
+	<string name="nurse_input_patient_activity_new_patient_text_view_text">New Patient</string>
+	<string name="nurse_input_patient_activity_time_text_view_text">time</string>
+	<string name="nurse_input_patient_activity_new_patient_text_view_hint">New Patient</string>
+	<string name="nurse_input_patient_activity_submit_button_hint">SUBMIT</string>
+	<string name="nurse_input_patient_activity_severity_text_view_hint">severity</string>
+	
+	<!-- Resources for PatientSignUpActivity -->
+	<string name="patient_sign_up_activity_submit_button_hint">SUBMIT</string>
+	<string name="patient_sign_up_activity_login_text_view_hint">Login</string>
+	<string name="patient_sign_up_activity_login_text_view_text">Login</string>
+	<string name="patient_sign_up_activity_submit_button_text">SUBMIT</string>
+	<string name="patient_sign_up_activity_id_code_text_view_hint">id code</string>
+	<string name="patient_sign_up_activity_id_code_text_view_text">id code</string>
+	
+	<!-- Resources for NurseSignUpActivity -->
+	<string name="nurse_sign_up_activity_submit_button_text">SUBMIT</string>
+	<string name="nurse_sign_up_activity_password_text_view_hint">password</string>
+	<string name="nurse_sign_up_activity_password_text_view_text">password</string>
+	<string name="nurse_sign_up_activity_email_text_view_text">email</string>
+	<string name="nurse_sign_up_activity_submit_button_hint">SUBMIT</string>
+	<string name="nurse_sign_up_activity_email_text_view_hint">email</string>
+	<string name="nurse_sign_up_activity_login_text_view_hint">Login</string>
+	<string name="nurse_sign_up_activity_login_text_view_text">Login</string>
+	
+	<!-- Resources for NurseDoctorProfileActivity -->
+	<string name="nurse_doctor_profile_activity_doctor_button_hint">LOGOUT</string>
+	<string name="nurse_doctor_profile_activity_submit_button_text">CHANGE</string>
+	<string name="nurse_doctor_profile_activity_email_text_view_hint">email</string>
+	<string name="nurse_doctor_profile_activity_password_text_view_hint">password</string>
+	<string name="nurse_doctor_profile_activity_email_text_view_text">email</string>
+	<string name="nurse_doctor_profile_activity_profile_text_view_text">Profile</string>
+	<string name="nurse_doctor_profile_activity_password_text_view_text">password</string>
+	<string name="nurse_doctor_profile_activity_profile_text_view_hint">Profile</string>
+	<string name="nurse_doctor_profile_activity_submit_button_hint">CHANGE</string>
+	<string name="nurse_doctor_profile_activity_doctor_button_text">LOGOUT</string>
+	
+	<!-- Resources for DoctorsUpdatePatientListActivity -->
+	<string name="doctors_update_patient_list_activity_submit_two_button_hint">edit</string>
+	<string name="doctors_update_patient_list_activity_submit_two_button_text">edit</string>
+	<string name="doctors_update_patient_list_activity_submit_button_text">done</string>
+	<string name="doctors_update_patient_list_activity_submit_button_hint">done</string>
+	
+	<!-- Resources for NurseEditingPatientListActivity -->
+	<string name="nurse_editing_patient_list_activity_submit_button_hint">edit</string>
+	<string name="nurse_editing_patient_list_activity_submit_button_text">edit</string>
+	
+	<!-- Resources for DoctorProfileActivity -->
+	<string name="doctor_profile_activity_submit_button_text">CHANGE</string>
+	<string name="doctor_profile_activity_doctor_button_text">LOGOUT</string>
+	<string name="doctor_profile_activity_doctor_button_hint">LOGOUT</string>
+	<string name="doctor_profile_activity_password_text_view_text">password</string>
+	<string name="doctor_profile_activity_profile_text_view_text">Profile</string>
+	<string name="doctor_profile_activity_password_text_view_hint">password</string>
+	<string name="doctor_profile_activity_email_text_view_hint">email</string>
+	<string name="doctor_profile_activity_email_text_view_text">email</string>
+	<string name="doctor_profile_activity_submit_button_hint">CHANGE</string>
+	<string name="doctor_profile_activity_profile_text_view_hint">Profile</string>
+	
+	<!-- Resources for HomeActivity -->
+	<string name="home_activity_doctor_button_text">DOCTOR</string>
+	<string name="home_activity_who_are_you_text_view_hint">Who are you?</string>
+	<string name="home_activity_patient_button_hint">PATIENT</string>
+	<string name="home_activity_nurse_button_hint">NURSE</string>
+	<string name="home_activity_patient_button_text">PATIENT</string>
+	<string name="home_activity_doctor_button_hint">DOCTOR</string>
+	<string name="home_activity_who_are_you_text_view_text">Who are you?</string>
+	<string name="home_activity_nurse_button_text">NURSE</string>
+</resources>

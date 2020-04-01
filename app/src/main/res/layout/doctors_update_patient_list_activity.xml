@@ -1,0 +1,134 @@
+<android.support.constraint.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/doctors_update_patient_list_constraint_layout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/doctors_update_patient_list_activity_doctors_update_patient_list_constraint_layout_background_color">
+
+	<View
+		android:id="@+id/title_constraint_layout"
+		android:layout_width="0dp"
+		android:layout_height="@dimen/doctors_update_patient_list_activity_title_constraint_layout_height"
+		android:background="#FFFFFF"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintHorizontal_weight="1"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		tools:layout_editor_absoluteX="0dp"
+		tools:layout_editor_absoluteY="560dp"/>
+
+	<View
+		android:id="@+id/rectangle_constraint_layout"
+		android:layout_width="@dimen/doctors_update_patient_list_activity_rectangle_constraint_layout_width"
+		android:layout_height="@dimen/doctors_update_patient_list_activity_rectangle_constraint_layout_height"
+		android:background="#FFFFFF"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		tools:layout_editor_absoluteX="240dp"
+		tools:layout_editor_absoluteY="560dp"/>
+
+	<View
+		android:id="@+id/rectangle_two_constraint_layout"
+		android:layout_width="@dimen/doctors_update_patient_list_activity_rectangle_two_constraint_layout_width"
+		android:layout_height="@dimen/doctors_update_patient_list_activity_rectangle_two_constraint_layout_height"
+		android:background="#FFFFFF"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		tools:layout_editor_absoluteX="120dp"
+		tools:layout_editor_absoluteY="560dp"/>
+
+	<View
+		android:id="@+id/rectangle_three_constraint_layout"
+		android:layout_width="@dimen/doctors_update_patient_list_activity_rectangle_three_constraint_layout_width"
+		android:layout_height="@dimen/doctors_update_patient_list_activity_rectangle_three_constraint_layout_height"
+		android:background="#FFFFFF"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		tools:layout_editor_absoluteX="0dp"
+		tools:layout_editor_absoluteY="560dp"/>
+
+	<ImageView
+		android:id="@+id/screen_shot20200319_at54904_pm_image_view"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="@dimen/doctors_update_patient_list_activity_screen_shot20200319_at54904_pm_image_view_margin_bottom"
+		android:layout_marginEnd="@dimen/doctors_update_patient_list_activity_screen_shot20200319_at54904_pm_image_view_margin_end"
+		android:scaleType="center"
+		android:src="@drawable/screen_shot_2020_03_19_at_54904_pm"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		tools:layout_editor_absoluteX="276dp"
+		tools:layout_editor_absoluteY="576dp"/>
+
+	<Button
+		android:id="@+id/submit_button"
+		android:layout_width="@dimen/doctors_update_patient_list_activity_submit_button_width"
+		android:layout_height="@dimen/doctors_update_patient_list_activity_submit_button_height"
+		android:layout_marginEnd="@dimen/doctors_update_patient_list_activity_submit_button_margin_end"
+		android:layout_marginTop="@dimen/doctors_update_patient_list_activity_submit_button_margin_top"
+		android:background="@drawable/doctors_update_patient_list_activity_submit_button_ripple"
+		android:fontFamily="@font/font_arialmt"
+		android:gravity="start"
+		android:text="@string/doctors_update_patient_list_activity_submit_button_text"
+		android:textColor="#FFFFFF"
+		android:textSize="@dimen/doctors_update_patient_list_activity_submit_button_text_size"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:layout_editor_absoluteX="261dp"
+		tools:layout_editor_absoluteY="89dp"/>
+
+	<Button
+		android:id="@+id/submit_two_button"
+		android:layout_width="@dimen/doctors_update_patient_list_activity_submit_two_button_width"
+		android:layout_height="@dimen/doctors_update_patient_list_activity_submit_two_button_height"
+		android:layout_marginStart="@dimen/doctors_update_patient_list_activity_submit_two_button_margin_start"
+		android:layout_marginTop="@dimen/doctors_update_patient_list_activity_submit_two_button_margin_top"
+		android:background="@drawable/doctors_update_patient_list_activity_submit_two_button_ripple"
+		android:fontFamily="@font/font_arialmt"
+		android:gravity="start"
+		android:text="@string/doctors_update_patient_list_activity_submit_two_button_text"
+		android:textColor="#FFFFFF"
+		android:textSize="@dimen/doctors_update_patient_list_activity_submit_two_button_text_size"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:layout_editor_absoluteX="15dp"
+		tools:layout_editor_absoluteY="83dp"/>
+
+	<ImageView
+		android:id="@+id/screen_shot20200319_at63337_pm_image_view"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="@dimen/doctors_update_patient_list_activity_screen_shot20200319_at63337_pm_image_view_margin_bottom"
+		android:layout_marginStart="@dimen/doctors_update_patient_list_activity_screen_shot20200319_at63337_pm_image_view_margin_start"
+		android:scaleType="center"
+		android:src="@drawable/screen_shot_2020_03_19_at_63337_pm"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		tools:layout_editor_absoluteX="36dp"
+		tools:layout_editor_absoluteY="576dp"/>
+
+	<ImageView
+		android:id="@+id/screen_shot20200320_at32619_pm_image_view"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="@dimen/doctors_update_patient_list_activity_screen_shot20200320_at32619_pm_image_view_margin_bottom"
+		android:scaleType="center"
+		android:src="@drawable/screen_shot_2020_03_20_at_32619_pm"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		tools:layout_editor_absoluteX="160dp"
+		tools:layout_editor_absoluteY="580dp"/>
+
+	<android.support.v7.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:background="#C4ADF9"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toTopOf="parent"/>
+</android.support.constraint.ConstraintLayout>
