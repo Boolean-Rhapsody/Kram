@@ -1,0 +1,60 @@
+<resources>
+	
+	<!-- Project level resources -->
+	<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+		<item name="colorPrimary">@color/color_primary</item>
+		<item name="colorPrimaryDark">@color/color_primary_dark</item>
+		<item name="colorAccent">@color/color_accent</item>
+	</style>
+	
+	<!-- WelcomeActivity -->
+	<style name="WelcomeActivityTheme" parent="Theme.AppCompat.NoActionBar"/>
+	
+	<!-- LoginActivity -->
+	<style name="LoginActivityTheme" parent="Theme.AppCompat.NoActionBar"/>
+	
+	<!-- SignupActivity -->
+	<style name="SignupActivityTheme" parent="Theme.AppCompat.NoActionBar"/>
+	<style name="SignupActivitySwitchSwitchTheme">
+		<item name="colorControlActivated">@color/signup_activity_switch_switch_active_color</item>
+	</style>
+	<style name="SignupActivitySwitchTwoSwitchTheme">
+		<item name="colorControlActivated">@color/signup_activity_switch_two_switch_active_color</item>
+	</style>
+	
+	<!-- PatientInfoActivity -->
+	<style name="PatientInfoActivityTheme" parent="Theme.AppCompat.NoActionBar"/>
+	
+	<!-- PatientHomeActivity -->
+	<style name="PatientHomeActivityTheme" parent="Theme.AppCompat.NoActionBar"/>
+	
+	<!-- DoctorsSettingsActivity -->
+	<style name="DoctorsSettingsActivityTheme" parent="Theme.AppCompat.NoActionBar"/>
+	<style name="DoctorsSettingsActivitySlideSwitchTheme">
+		<item name="colorControlActivated">@color/doctors_settings_activity_slide_switch_active_color</item>
+	</style>
+	<style name="DoctorsSettingsActivitySlideTwoSwitchTheme">
+		<item name="colorControlActivated">@color/doctors_settings_activity_slide_two_switch_active_color</item>
+	</style>
+	
+	<!-- NurseDoctorsActivity -->
+	<style name="NurseDoctorsActivityTheme" parent="Theme.AppCompat.NoActionBar"/>
+	
+	<!-- DoctorsPatientsActivity -->
+	<style name="DoctorsPatientsActivityTheme" parent="Theme.AppCompat.NoActionBar"/>
+	
+	<!-- NursePatientsActivity -->
+	<style name="NursePatientsActivityTheme" parent="Theme.AppCompat.NoActionBar"/>
+	
+	<!-- PatientDetailsActivity -->
+	<style name="PatientDetailsActivityTheme" parent="Theme.AppCompat.NoActionBar"/>
+	
+	<!-- TabGroupOneActivity -->
+	<style name="TabGroupOneActivityTheme" parent="Theme.AppCompat.NoActionBar"/>
+	
+	<!-- TabGroupTwoActivity -->
+	<style name="TabGroupTwoActivityTheme" parent="Theme.AppCompat.NoActionBar"/>
+	
+	<!-- TabGroupThreeActivity -->
+	<style name="TabGroupThreeActivityTheme" parent="Theme.AppCompat.NoActionBar"/>
+</resources>

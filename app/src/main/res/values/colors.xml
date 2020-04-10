@@ -1,0 +1,120 @@
+<resources>
+	
+	<!-- Project level resources -->
+	<color name="color_primary">#000000</color>
+	<color name="color_click_overlay">#555555</color>
+	<color name="material_bottom_sheet_title">#0000008A</color>
+	<color name="color_primary_dark">#000000</color>
+	<color name="color_hint_text">#D0D1D5</color>
+	<color name="color_accent">#000000</color>
+	<color name="material_bottom_sheet_item">#000000DE</color>
+	
+	<!-- Resources for DoctorsSettingsActivity -->
+	<color name="doctors_settings_activity_slide_two_switch_active_color">#0080FF</color>
+	<color name="doctors_settings_activity_label_four_text_view_text_color">#040C16</color>
+	<color name="doctors_settings_activity_slide_two_switch_thumb_tint_color">#FFFFFF</color>
+	<color name="doctors_settings_activity_label_text_view_text_color">#040C16</color>
+	<color name="doctors_settings_activity_label_three_text_view_text_color">#040C16</color>
+	<color name="doctors_settings_activity_label_two_text_view_text_color">#040C16</color>
+	<color name="doctors_settings_activity_slide_switch_active_color">#0080FF</color>
+	<color name="doctors_settings_activity_doctorssettings_constraint_layout_background_color">#F4F2F4</color>
+	<color name="doctors_settings_activity_slide_switch_thumb_tint_color">#FFFFFF</color>
+	
+	<!-- Resources for SignupActivity -->
+	<color name="signup_activity_signup_constraint_layout_gradient_stop_color_2">#8B1B8C</color>
+	<color name="signup_activity_speciality_edit_text_background_color">#00000000</color>
+	<color name="signup_activity_speciality_edit_text_text_color">#000000</color>
+	<color name="signup_activity_separator_constraint_layout_background_color">#000000</color>
+	<color name="signup_activity_sign_up_button_text_color">#D9676E</color>
+	<color name="signup_activity_switch_two_switch_thumb_tint_color">#FFFFFF</color>
+	<color name="signup_activity_signup_constraint_layout_background_color">#FFFFFF</color>
+	<color name="signup_activity_switch_two_switch_active_color">#0080FF</color>
+	<color name="signup_activity_signup_constraint_layout_gradient_stop_color_1">#F78462</color>
+	<color name="signup_activity_switch_switch_active_color">#0080FF</color>
+	<color name="signup_activity_hospital_name_edit_text_background_color">#00000000</color>
+	<color name="signup_activity_switch_switch_thumb_tint_color">#FFFFFF</color>
+	<color name="signup_activity_hospital_name_edit_text_text_color">#000000</color>
+	
+	<!-- Resources for WelcomeActivity -->
+	<color name="welcome_activity_patientloginbutton_button_text_color">#D9676E</color>
+	<color name="welcome_activity_doctorloginbutton_button_text_color">#DA686D</color>
+	<color name="welcome_activity_welcome_constraint_layout_background_color">#FFFFFF</color>
+	<color name="welcome_activity_nurseloginbutton_button_text_color">#DA686D</color>
+	<color name="welcome_activity_welcome_constraint_layout_gradient_stop_color_1">#F78462</color>
+	<color name="welcome_activity_welcome_constraint_layout_gradient_stop_color_2">#8B1B8C</color>
+	
+	<!-- Resources for NursePatientsActivity -->
+	<color name="nurse_patients_activity_nursepatients_constraint_layout_background_color">#F4F2F4</color>
+	
+	<!-- Resources for MessageElevenViewHolder -->
+	<color name="message_eleven_view_holder_finally_having_adat_text_view_text_color">#949494</color>
+	
+	<!-- Resources for MessageFiveViewHolder -->
+	<color name="message_five_view_holder_finally_having_adat_text_view_text_color">#949494</color>
+	
+	<!-- Resources for MessageViewHolder -->
+	<color name="message_view_holder_the_needs_of_the_few_text_view_text_color">#949494</color>
+	
+	<!-- Resources for MessageThreeViewHolder -->
+	<color name="message_three_view_holder_how_do_you_go_to_the_text_view_text_color">#949494</color>
+	
+	<!-- Resources for NurseDoctorsActivity -->
+	<color name="nurse_doctors_activity_nursedoctors_constraint_layout_background_color">#F4F2F4</color>
+	
+	<!-- Resources for MessageTenViewHolder -->
+	<color name="message_ten_view_holder_the_water_so_testy_ytext_view_text_color">#949494</color>
+	
+	<!-- Resources for MessageFourViewHolder -->
+	<color name="message_four_view_holder_the_water_so_testy_ytext_view_text_color">#949494</color>
+	
+	<!-- Resources for LoginActivity -->
+	<color name="login_activity_your_name_edit_text_text_color">#000000</color>
+	<color name="login_activity_login_constraint_layout_gradient_stop_color_1">#F78462</color>
+	<color name="login_activity_your_name_edit_text_background_color">#00000000</color>
+	<color name="login_activity_your_patient_id_edit_text_text_color">#000000</color>
+	<color name="login_activity_login_button_text_color">#D9676E</color>
+	<color name="login_activity_your_patient_id_edit_text_background_color">#00000000</color>
+	<color name="login_activity_separator_constraint_layout_background_color">#000000</color>
+	<color name="login_activity_login_constraint_layout_gradient_stop_color_2">#8B1B8C</color>
+	<color name="login_activity_login_fields_constraint_layout_background_color">#FFFFFF</color>
+	<color name="login_activity_login_constraint_layout_background_color">#FFFFFF</color>
+	
+	<!-- Resources for MessageSeventeenViewHolder -->
+	<color name="message_seventeen_view_holder_finally_having_adat_text_view_text_color">#949494</color>
+	
+	<!-- Resources for PatientInfoActivity -->
+	<color name="patient_info_activity_patientinfo_constraint_layout_background_color">#F4F2F4</color>
+	
+	<!-- Resources for PatientDetailsActivity -->
+	<color name="patient_details_activity_patientdetails_constraint_layout_background_color">#F4F2F4</color>
+	<color name="patient_details_activity_label_text_view_text_color">#040C16</color>
+	<color name="patient_details_activity_label_three_text_view_text_color">#040C16</color>
+	<color name="patient_details_activity_done_text_view_text_color">#8B1B8C</color>
+	<color name="patient_details_activity_completed_text_view_text_color">#0F0F0F</color>
+	<color name="patient_details_activity_label_two_text_view_text_color">#040C16</color>
+	
+	<!-- Resources for MessageSevenViewHolder -->
+	<color name="message_seven_view_holder_the_needs_of_the_few_text_view_text_color">#949494</color>
+	
+	<!-- Resources for PatientHomeActivity -->
+	<color name="patient_home_activity_text_view_three_text_view_text_color">#F78462</color>
+	<color name="patient_home_activity_waiting_since1012_text_view_text_color">#040C16</color>
+	<color name="patient_home_activity_peter_text_view_text_color">#040C16</color>
+	<color name="patient_home_activity_text_view_text_view_text_color">#8B1B8C</color>
+	<color name="patient_home_activity_patienthome_constraint_layout_background_color">#F4F2F4</color>
+	
+	<!-- Resources for DoctorsPatientsActivity -->
+	<color name="doctors_patients_activity_doctorspatients_constraint_layout_background_color">#F4F2F4</color>
+	
+	<!-- Resources for MessageNineViewHolder -->
+	<color name="message_nine_view_holder_how_do_you_go_to_the_text_view_text_color">#949494</color>
+	
+	<!-- Resources for MessageThirteenViewHolder -->
+	<color name="message_thirteen_view_holder_the_needs_of_the_few_text_view_text_color">#949494</color>
+	
+	<!-- Resources for MessageSixteenViewHolder -->
+	<color name="message_sixteen_view_holder_the_water_so_testy_ytext_view_text_color">#949494</color>
+	
+	<!-- Resources for MessageFifteenViewHolder -->
+	<color name="message_fifteen_view_holder_how_do_you_go_to_the_text_view_text_color">#949494</color>
+</resources>

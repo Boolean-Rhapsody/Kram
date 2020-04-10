@@ -1,0 +1,440 @@
+<resources>
+	
+	<!-- Resources for MessageElevenViewHolder -->
+	<dimen name="message_eleven_view_holder_finally_having_adat_text_view_text_size">10sp</dimen>
+	<dimen name="message_eleven_view_holder_avatar_image_view_margin_top">20dp</dimen>
+	<dimen name="message_eleven_view_holder_avatar_image_view_margin_start">26dp</dimen>
+	<dimen name="message_eleven_view_holder_finally_having_adat_text_view_margin_end">46dp</dimen>
+	<dimen name="message_eleven_view_holder_name_text_view_margin_start">10dp</dimen>
+	<dimen name="message_eleven_view_holder_message_height">101dp</dimen>
+	<dimen name="message_eleven_view_holder_finally_having_adat_text_view_margin_top">9dp</dimen>
+	<dimen name="message_eleven_view_holder_name_text_view_margin_top">31dp</dimen>
+	<dimen name="message_eleven_view_holder_path2_image_view_margin_end">19dp</dimen>
+	<dimen name="message_eleven_view_holder_name_text_view_text_size">16sp</dimen>
+	
+	<!-- Resources for NurseDoctorsActivity -->
+	<dimen name="nurse_doctors_activity_messages_recycler_view_margin_top">64dp</dimen>
+	
+	<!-- Resources for MessageFiveViewHolder -->
+	<dimen name="message_five_view_holder_finally_having_adat_text_view_margin_end">46dp</dimen>
+	<dimen name="message_five_view_holder_name_text_view_margin_start">16dp</dimen>
+	<dimen name="message_five_view_holder_finally_having_adat_text_view_margin_top">9dp</dimen>
+	<dimen name="message_five_view_holder_avatar_image_view_margin_start">20dp</dimen>
+	<dimen name="message_five_view_holder_name_text_view_text_size">16sp</dimen>
+	<dimen name="message_five_view_holder_name_text_view_margin_top">31dp</dimen>
+	<dimen name="message_five_view_holder_finally_having_adat_text_view_text_size">10sp</dimen>
+	<dimen name="message_five_view_holder_path2_image_view_margin_end">19dp</dimen>
+	<dimen name="message_five_view_holder_message_height">101dp</dimen>
+	<dimen name="message_five_view_holder_avatar_image_view_margin_top">19dp</dimen>
+	
+	<!-- Resources for DoctorsPatientsActivity -->
+	<dimen name="doctors_patients_activity_messages_recycler_view_margin_top">64dp</dimen>
+	
+	<!-- Resources for MessageFifteenViewHolder -->
+	<dimen name="message_fifteen_view_holder_how_do_you_go_to_the_text_view_margin_start">18dp</dimen>
+	<dimen name="message_fifteen_view_holder_message_height">101dp</dimen>
+	<dimen name="message_fifteen_view_holder_name_text_view_margin_start">18dp</dimen>
+	<dimen name="message_fifteen_view_holder_name_text_view_margin_top">31dp</dimen>
+	<dimen name="message_fifteen_view_holder_path2_image_view_margin_end">19dp</dimen>
+	<dimen name="message_fifteen_view_holder_how_do_you_go_to_the_text_view_text_size">10sp</dimen>
+	<dimen name="message_fifteen_view_holder_name_text_view_text_size">16sp</dimen>
+	<dimen name="message_fifteen_view_holder_avatar_image_view_margin_start">17dp</dimen>
+	<dimen name="message_fifteen_view_holder_how_do_you_go_to_the_text_view_margin_top">9dp</dimen>
+	
+	<!-- Resources for MessageSevenViewHolder -->
+	<dimen name="message_seven_view_holder_the_needs_of_the_few_text_view_text_size">10sp</dimen>
+	<dimen name="message_seven_view_holder_name_text_view_text_size">16sp</dimen>
+	<dimen name="message_seven_view_holder_message_height">100dp</dimen>
+	<dimen name="message_seven_view_holder_the_needs_of_the_few_text_view_margin_top">9dp</dimen>
+	<dimen name="message_seven_view_holder_name_text_view_margin_top">31dp</dimen>
+	<dimen name="message_seven_view_holder_name_text_view_margin_start">10dp</dimen>
+	<dimen name="message_seven_view_holder_avatar_image_view_margin_start">18dp</dimen>
+	<dimen name="message_seven_view_holder_the_needs_of_the_few_text_view_margin_end">47dp</dimen>
+	<dimen name="message_seven_view_holder_avatar_image_view_margin_top">12dp</dimen>
+	<dimen name="message_seven_view_holder_path2_image_view_margin_end">19dp</dimen>
+	
+	<!-- Resources for MessageEighteenViewHolder -->
+	<dimen name="message_eighteen_view_holder_name_text_view_margin_start">16dp</dimen>
+	<dimen name="message_eighteen_view_holder_we_ve_been_forced_to_text_view_text_size">10sp</dimen>
+	<dimen name="message_eighteen_view_holder_message_height">101dp</dimen>
+	<dimen name="message_eighteen_view_holder_avatar_image_view_margin_start">20dp</dimen>
+	<dimen name="message_eighteen_view_holder_we_ve_been_forced_to_text_view_margin_top">9dp</dimen>
+	<dimen name="message_eighteen_view_holder_name_text_view_text_size">16sp</dimen>
+	<dimen name="message_eighteen_view_holder_path2_image_view_margin_end">19dp</dimen>
+	<dimen name="message_eighteen_view_holder_we_ve_been_forced_to_text_view_margin_start">16dp</dimen>
+	<dimen name="message_eighteen_view_holder_name_text_view_margin_top">31dp</dimen>
+	
+	<!-- Resources for MessageFourViewHolder -->
+	<dimen name="message_four_view_holder_avatar_image_view_margin_start">25dp</dimen>
+	<dimen name="message_four_view_holder_name_text_view_margin_top">31dp</dimen>
+	<dimen name="message_four_view_holder_the_water_so_testy_ytext_view_text_size">10sp</dimen>
+	<dimen name="message_four_view_holder_name_text_view_text_size">16sp</dimen>
+	<dimen name="message_four_view_holder_the_water_so_testy_ytext_view_margin_top">9dp</dimen>
+	<dimen name="message_four_view_holder_name_text_view_margin_start">10dp</dimen>
+	<dimen name="message_four_view_holder_path2_image_view_margin_end">19dp</dimen>
+	<dimen name="message_four_view_holder_the_water_so_testy_ytext_view_margin_end">45dp</dimen>
+	<dimen name="message_four_view_holder_avatar_image_view_margin_top">25dp</dimen>
+	<dimen name="message_four_view_holder_message_height">101dp</dimen>
+	
+	<!-- Resources for LoginActivity -->
+	<dimen name="login_activity_your_patient_id_edit_text_text_size">15sp</dimen>
+	<dimen name="login_activity_login_text_view_text_size">42sp</dimen>
+	<dimen name="login_activity_login_fields_constraint_layout_radius">2dp</dimen>
+	<dimen name="login_activity_your_name_edit_text_height">20dp</dimen>
+	<dimen name="login_activity_login_button_image_padding">10dp</dimen>
+	<dimen name="login_activity_your_patient_id_edit_text_height">20dp</dimen>
+	<dimen name="login_activity_login_fields_constraint_layout_margin_start">20dp</dimen>
+	<dimen name="login_activity_your_patient_id_edit_text_width">249dp</dimen>
+	<dimen name="login_activity_login_button_margin_start">20dp</dimen>
+	<dimen name="login_activity_login_button_margin_bottom">48dp</dimen>
+	<dimen name="login_activity_login_button_margin_end">20dp</dimen>
+	<dimen name="login_activity_your_name_edit_text_width">253dp</dimen>
+	<dimen name="login_activity_login_button_height">60dp</dimen>
+	<dimen name="login_activity_your_name_edit_text_margin_start">15dp</dimen>
+	<dimen name="login_activity_separator_constraint_layout_height">0dp</dimen>
+	<dimen name="login_activity_your_name_edit_text_margin_top">14dp</dimen>
+	<dimen name="login_activity_your_patient_id_edit_text_margin_start">15dp</dimen>
+	<dimen name="login_activity_login_fields_constraint_layout_margin_end">20dp</dimen>
+	<dimen name="login_activity_welcome_back_text_view_text_size">18sp</dimen>
+	<dimen name="login_activity_login_button_text_size">15sp</dimen>
+	<dimen name="login_activity_welcome_back_text_view_width">194dp</dimen>
+	<dimen name="login_activity_welcome_back_text_view_margin_top">26dp</dimen>
+	<dimen name="login_activity_login_text_view_margin_top">114dp</dimen>
+	<dimen name="login_activity_login_fields_constraint_layout_height">101dp</dimen>
+	<dimen name="login_activity_login_button_radius">2dp</dimen>
+	<dimen name="login_activity_login_fields_constraint_layout_margin_top">141dp</dimen>
+	<dimen name="login_activity_your_patient_id_edit_text_margin_top">14dp</dimen>
+	<dimen name="login_activity_your_name_edit_text_text_size">15sp</dimen>
+	
+	<!-- Resources for MessageViewHolder -->
+	<dimen name="message_view_holder_avatar_image_view_margin_start">15dp</dimen>
+	<dimen name="message_view_holder_message_height">100dp</dimen>
+	<dimen name="message_view_holder_the_needs_of_the_few_text_view_margin_end">47dp</dimen>
+	<dimen name="message_view_holder_the_needs_of_the_few_text_view_text_size">10sp</dimen>
+	<dimen name="message_view_holder_name_text_view_margin_top">31dp</dimen>
+	<dimen name="message_view_holder_path2_image_view_margin_end">19dp</dimen>
+	<dimen name="message_view_holder_name_text_view_margin_start">15dp</dimen>
+	<dimen name="message_view_holder_name_text_view_text_size">16sp</dimen>
+	<dimen name="message_view_holder_the_needs_of_the_few_text_view_margin_top">9dp</dimen>
+	
+	<!-- Resources for MessageSixViewHolder -->
+	<dimen name="message_six_view_holder_name_text_view_text_size">16sp</dimen>
+	<dimen name="message_six_view_holder_we_ve_been_forced_to_text_view_margin_start">10dp</dimen>
+	<dimen name="message_six_view_holder_name_text_view_margin_start">10dp</dimen>
+	<dimen name="message_six_view_holder_we_ve_been_forced_to_text_view_text_size">10sp</dimen>
+	<dimen name="message_six_view_holder_name_text_view_margin_top">31dp</dimen>
+	<dimen name="message_six_view_holder_path2_image_view_margin_end">19dp</dimen>
+	<dimen name="message_six_view_holder_message_height">101dp</dimen>
+	<dimen name="message_six_view_holder_we_ve_been_forced_to_text_view_margin_top">9dp</dimen>
+	<dimen name="message_six_view_holder_avatar_image_view_margin_start">20dp</dimen>
+	
+	<!-- Resources for SignupActivity -->
+	<dimen name="signup_activity_speciality_edit_text_height">20dp</dimen>
+	<dimen name="signup_activity_welcome_text_view_text_size">42sp</dimen>
+	<dimen name="signup_activity_hospital_name_edit_text_text_size">15sp</dimen>
+	<dimen name="signup_activity_switch_switch_radius">16dp</dimen>
+	<dimen name="signup_activity_hospital_name_edit_text_margin_top">14dp</dimen>
+	<dimen name="signup_activity_speciality_edit_text_text_size">15sp</dimen>
+	<dimen name="signup_activity_group_constraint_layout_margin_top">45dp</dimen>
+	<dimen name="signup_activity_login_fields_constraint_layout_margin_top">78dp</dimen>
+	<dimen name="signup_activity_sign_up_button_radius">2dp</dimen>
+	<dimen name="signup_activity_isdoctor_constraint_layout_height">32dp</dimen>
+	<dimen name="signup_activity_hospital_name_edit_text_width">189dp</dimen>
+	<dimen name="signup_activity_speciality_edit_text_margin_top">14dp</dimen>
+	<dimen name="signup_activity_sign_up_button_margin_end">20dp</dimen>
+	<dimen name="signup_activity_switch_two_switch_radius">16dp</dimen>
+	<dimen name="signup_activity_sign_up_button_text_size">15sp</dimen>
+	<dimen name="signup_activity_sign_up_button_image_padding">10dp</dimen>
+	<dimen name="signup_activity_group_constraint_layout_height">95dp</dimen>
+	<dimen name="signup_activity_login_fields_constraint_layout_margin_start">20dp</dimen>
+	<dimen name="signup_activity_group_constraint_layout_width">325dp</dimen>
+	<dimen name="signup_activity_are_you_adoctor_text_view_text_size">13sp</dimen>
+	<dimen name="signup_activity_it_sfree_text_view_text_size">18sp</dimen>
+	<dimen name="signup_activity_sign_up_button_height">60dp</dimen>
+	<dimen name="signup_activity_login_fields_constraint_layout_margin_end">20dp</dimen>
+	<dimen name="signup_activity_are_you_anurse_text_view_text_size">13sp</dimen>
+	<dimen name="signup_activity_it_sfree_text_view_margin_top">12dp</dimen>
+	<dimen name="signup_activity_sign_up_button_margin_bottom">48dp</dimen>
+	<dimen name="signup_activity_isnurse_constraint_layout_height">32dp</dimen>
+	<dimen name="signup_activity_separator_constraint_layout_height">0dp</dimen>
+	<dimen name="signup_activity_login_fields_constraint_layout_height">101dp</dimen>
+	<dimen name="signup_activity_speciality_edit_text_margin_start">15dp</dimen>
+	<dimen name="signup_activity_hospital_name_edit_text_height">20dp</dimen>
+	<dimen name="signup_activity_sign_up_button_margin_start">20dp</dimen>
+	<dimen name="signup_activity_login_fields_constraint_layout_radius">2dp</dimen>
+	<dimen name="signup_activity_welcome_text_view_margin_top">89dp</dimen>
+	<dimen name="signup_activity_hospital_name_edit_text_margin_start">15dp</dimen>
+	<dimen name="signup_activity_speciality_edit_text_width">177dp</dimen>
+	<dimen name="signup_activity_it_sfree_text_view_width">216dp</dimen>
+	
+	<!-- Resources for MessageEightViewHolder -->
+	<dimen name="message_eight_view_holder_message_height">101dp</dimen>
+	<dimen name="message_eight_view_holder_name_text_view_margin_start">11dp</dimen>
+	<dimen name="message_eight_view_holder_i_mtelling_you_the_text_view_margin_start">11dp</dimen>
+	<dimen name="message_eight_view_holder_i_mtelling_you_the_text_view_margin_top">9dp</dimen>
+	<dimen name="message_eight_view_holder_avatar_image_view_margin_start">22dp</dimen>
+	<dimen name="message_eight_view_holder_i_mtelling_you_the_text_view_text_size">10sp</dimen>
+	<dimen name="message_eight_view_holder_path2_image_view_margin_end">19dp</dimen>
+	<dimen name="message_eight_view_holder_avatar_image_view_margin_top">19dp</dimen>
+	<dimen name="message_eight_view_holder_name_text_view_text_size">16sp</dimen>
+	<dimen name="message_eight_view_holder_name_text_view_margin_top">31dp</dimen>
+	
+	<!-- Resources for PatientHomeActivity -->
+	<dimen name="patient_home_activity_text_view_two_text_view_margin_end">11dp</dimen>
+	<dimen name="patient_home_activity_text_view_text_view_text_size">24sp</dimen>
+	<dimen name="patient_home_activity_header_constraint_layout_height">519dp</dimen>
+	<dimen name="patient_home_activity_severity_text_view_text_size">12sp</dimen>
+	<dimen name="patient_home_activity_text_view_three_text_view_margin_end">15dp</dimen>
+	<dimen name="patient_home_activity_waiting_since1012_text_view_text_size">12sp</dimen>
+	<dimen name="patient_home_activity_expected_min_text_view_text_size">12sp</dimen>
+	<dimen name="patient_home_activity_patientsinfo_constraint_layout_margin_top">20dp</dimen>
+	<dimen name="patient_home_activity_expectedinfo_constraint_layout_margin_top">20dp</dimen>
+	<dimen name="patient_home_activity_text_view_two_text_view_margin_start">12dp</dimen>
+	<dimen name="patient_home_activity_expectedinfo_constraint_layout_width">51dp</dimen>
+	<dimen name="patient_home_activity_text_view_text_view_margin_end">14dp</dimen>
+	<dimen name="patient_home_activity_text_view_three_text_view_text_size">24sp</dimen>
+	<dimen name="patient_home_activity_traveler_dreamer_text_view_text_size">14sp</dimen>
+	<dimen name="patient_home_activity_patientsinfo_constraint_layout_height">59dp</dimen>
+	<dimen name="patient_home_activity_expectedinfo_constraint_layout_height">59dp</dimen>
+	<dimen name="patient_home_activity_text_view_three_text_view_margin_start">15dp</dimen>
+	<dimen name="patient_home_activity_peter_text_view_margin_top">57dp</dimen>
+	<dimen name="patient_home_activity_text_view_two_text_view_text_size">24sp</dimen>
+	<dimen name="patient_home_activity_info_bar_constraint_layout_height">84dp</dimen>
+	<dimen name="patient_home_activity_severityinfo_constraint_layout_width">43dp</dimen>
+	<dimen name="patient_home_activity_patientsinfo_constraint_layout_margin_start">41dp</dimen>
+	<dimen name="patient_home_activity_patients_ahead_text_view_text_size">12sp</dimen>
+	<dimen name="patient_home_activity_patientsinfo_constraint_layout_width">44dp</dimen>
+	<dimen name="patient_home_activity_traveler_dreamer_text_view_margin_top">38dp</dimen>
+	<dimen name="patient_home_activity_severityinfo_constraint_layout_margin_end">41dp</dimen>
+	<dimen name="patient_home_activity_info_bar_constraint_layout_margin_top">64dp</dimen>
+	<dimen name="patient_home_activity_patient_image_view_margin_top">51dp</dimen>
+	<dimen name="patient_home_activity_text_view_text_view_margin_start">15dp</dimen>
+	<dimen name="patient_home_activity_severityinfo_constraint_layout_height">44dp</dimen>
+	<dimen name="patient_home_activity_peter_text_view_text_size">26sp</dimen>
+	<dimen name="patient_home_activity_waiting_since1012_text_view_margin_top">21dp</dimen>
+	
+	<!-- Resources for PatientInfoActivity -->
+	<dimen name="patient_info_activity_traveler_dreamer_text_view_margin_end">74dp</dimen>
+	<dimen name="patient_info_activity_traveler_dreamer_text_view_margin_start">74dp</dimen>
+	<dimen name="patient_info_activity_header_constraint_layout_width">300dp</dimen>
+	<dimen name="patient_info_activity_traveler_dreamer_text_view_height">99dp</dimen>
+	<dimen name="patient_info_activity_header_constraint_layout_margin_top">102dp</dimen>
+	<dimen name="patient_info_activity_traveler_dreamer_text_view_margin_top">31dp</dimen>
+	<dimen name="patient_info_activity_header_constraint_layout_height">399dp</dimen>
+	<dimen name="patient_info_activity_traveler_dreamer_text_view_text_size">14sp</dimen>
+	
+	<!-- Resources for MessageTwoViewHolder -->
+	<dimen name="message_two_view_holder_path2_image_view_margin_end">19dp</dimen>
+	<dimen name="message_two_view_holder_name_text_view_margin_top">31dp</dimen>
+	<dimen name="message_two_view_holder_i_mtelling_you_the_text_view_text_size">10sp</dimen>
+	<dimen name="message_two_view_holder_avatar_image_view_margin_start">17dp</dimen>
+	<dimen name="message_two_view_holder_i_mtelling_you_the_text_view_margin_top">9dp</dimen>
+	<dimen name="message_two_view_holder_i_mtelling_you_the_text_view_margin_start">19dp</dimen>
+	<dimen name="message_two_view_holder_name_text_view_text_size">16sp</dimen>
+	<dimen name="message_two_view_holder_name_text_view_margin_start">19dp</dimen>
+	<dimen name="message_two_view_holder_avatar_image_view_margin_top">18dp</dimen>
+	<dimen name="message_two_view_holder_message_height">101dp</dimen>
+	
+	<!-- Resources for MessageFourteenViewHolder -->
+	<dimen name="message_fourteen_view_holder_avatar_image_view_margin_start">17dp</dimen>
+	<dimen name="message_fourteen_view_holder_i_mtelling_you_the_text_view_text_size">10sp</dimen>
+	<dimen name="message_fourteen_view_holder_name_text_view_margin_start">20dp</dimen>
+	<dimen name="message_fourteen_view_holder_i_mtelling_you_the_text_view_margin_top">9dp</dimen>
+	<dimen name="message_fourteen_view_holder_path2_image_view_margin_end">19dp</dimen>
+	<dimen name="message_fourteen_view_holder_name_text_view_text_size">16sp</dimen>
+	<dimen name="message_fourteen_view_holder_avatar_image_view_margin_top">18dp</dimen>
+	<dimen name="message_fourteen_view_holder_name_text_view_margin_top">31dp</dimen>
+	<dimen name="message_fourteen_view_holder_i_mtelling_you_the_text_view_margin_start">20dp</dimen>
+	<dimen name="message_fourteen_view_holder_message_height">101dp</dimen>
+	
+	<!-- Resources for MessageSeventeenViewHolder -->
+	<dimen name="message_seventeen_view_holder_avatar_image_view_margin_start">20dp</dimen>
+	<dimen name="message_seventeen_view_holder_finally_having_adat_text_view_margin_top">9dp</dimen>
+	<dimen name="message_seventeen_view_holder_path2_image_view_margin_end">19dp</dimen>
+	<dimen name="message_seventeen_view_holder_name_text_view_margin_top">31dp</dimen>
+	<dimen name="message_seventeen_view_holder_name_text_view_margin_start">13dp</dimen>
+	<dimen name="message_seventeen_view_holder_finally_having_adat_text_view_text_size">10sp</dimen>
+	<dimen name="message_seventeen_view_holder_avatar_image_view_margin_top">19dp</dimen>
+	<dimen name="message_seventeen_view_holder_message_height">101dp</dimen>
+	<dimen name="message_seventeen_view_holder_name_text_view_text_size">16sp</dimen>
+	<dimen name="message_seventeen_view_holder_finally_having_adat_text_view_margin_end">46dp</dimen>
+	
+	<!-- Resources for MessageNineViewHolder -->
+	<dimen name="message_nine_view_holder_name_text_view_margin_start">10dp</dimen>
+	<dimen name="message_nine_view_holder_name_text_view_margin_top">31dp</dimen>
+	<dimen name="message_nine_view_holder_how_do_you_go_to_the_text_view_margin_top">9dp</dimen>
+	<dimen name="message_nine_view_holder_how_do_you_go_to_the_text_view_text_size">10sp</dimen>
+	<dimen name="message_nine_view_holder_path2_image_view_margin_end">19dp</dimen>
+	<dimen name="message_nine_view_holder_avatar_image_view_margin_start">19dp</dimen>
+	<dimen name="message_nine_view_holder_avatar_image_view_margin_top">15dp</dimen>
+	<dimen name="message_nine_view_holder_message_height">101dp</dimen>
+	<dimen name="message_nine_view_holder_name_text_view_text_size">16sp</dimen>
+	<dimen name="message_nine_view_holder_how_do_you_go_to_the_text_view_margin_start">10dp</dimen>
+	
+	<!-- Resources for WelcomeActivity -->
+	<dimen name="welcome_activity_loginbutton_constraint_layout_width">148dp</dimen>
+	<dimen name="welcome_activity_conquer_the_stars_text_view_text_size">18sp</dimen>
+	<dimen name="welcome_activity_hospital_image_view_margin_top">100dp</dimen>
+	<dimen name="welcome_activity_ellen_leya_text_view_margin_bottom">20dp</dimen>
+	<dimen name="welcome_activity_nurseloginbutton_button_image_padding">10dp</dimen>
+	<dimen name="welcome_activity_conquer_the_stars_text_view_margin_top">20dp</dimen>
+	<dimen name="welcome_activity_loginbutton_constraint_layout_height">211dp</dimen>
+	<dimen name="welcome_activity_nurseloginbutton_button_text_size">15sp</dimen>
+	<dimen name="welcome_activity_nurseloginbutton_button_radius">2dp</dimen>
+	<dimen name="welcome_activity_patientloginbutton_button_height">60dp</dimen>
+	<dimen name="welcome_activity_loginbutton_constraint_layout_margin_bottom">14dp</dimen>
+	<dimen name="welcome_activity_patientloginbutton_button_text_size">15sp</dimen>
+	<dimen name="welcome_activity_doctorloginbutton_button_radius">2dp</dimen>
+	<dimen name="welcome_activity_patientloginbutton_button_radius">2dp</dimen>
+	<dimen name="welcome_activity_kram_text_view_margin_top">60dp</dimen>
+	<dimen name="welcome_activity_doctorloginbutton_button_text_size">15sp</dimen>
+	<dimen name="welcome_activity_ellen_leya_text_view_text_size">15sp</dimen>
+	<dimen name="welcome_activity_nurseloginbutton_button_height">60dp</dimen>
+	<dimen name="welcome_activity_patientloginbutton_button_image_padding">10dp</dimen>
+	<dimen name="welcome_activity_doctorloginbutton_button_image_padding">10dp</dimen>
+	<dimen name="welcome_activity_doctorloginbutton_button_height">60dp</dimen>
+	<dimen name="welcome_activity_kram_text_view_text_size">42sp</dimen>
+	
+	<!-- Resources for DoctorsSettingsActivity -->
+	<dimen name="doctors_settings_activity_information_constraint_layout_margin_top">10dp</dimen>
+	<dimen name="doctors_settings_activity_text_two_text_view_margin_end">14dp</dimen>
+	<dimen name="doctors_settings_activity_information_text_view_margin_start">20dp</dimen>
+	<dimen name="doctors_settings_activity_slide_switch_radius">16dp</dimen>
+	<dimen name="doctors_settings_activity_path2_two_image_view_margin_end">19dp</dimen>
+	<dimen name="doctors_settings_activity_group2_constraint_layout_height">60dp</dimen>
+	<dimen name="doctors_settings_activity_label_two_text_view_margin_start">20dp</dimen>
+	<dimen name="doctors_settings_activity_label_two_text_view_text_size">16sp</dimen>
+	<dimen name="doctors_settings_activity_ui_settings_cell_two_constraint_layout_height">60dp</dimen>
+	<dimen name="doctors_settings_activity_details_text_view_text_size">12sp</dimen>
+	<dimen name="doctors_settings_activity_group2_two_constraint_layout_height">60dp</dimen>
+	<dimen name="doctors_settings_activity_ui_settings_cell_constraint_layout_height">60dp</dimen>
+	<dimen name="doctors_settings_activity_label_three_text_view_margin_start">20dp</dimen>
+	<dimen name="doctors_settings_activity_path2_image_view_margin_end">19dp</dimen>
+	<dimen name="doctors_settings_activity_slide_two_switch_margin_end">20dp</dimen>
+	<dimen name="doctors_settings_activity_label_three_text_view_text_size">16sp</dimen>
+	<dimen name="doctors_settings_activity_text_two_text_view_text_size">16sp</dimen>
+	<dimen name="doctors_settings_activity_ui_settings_cell_constraint_layout_margin_top">10dp</dimen>
+	<dimen name="doctors_settings_activity_text_text_view_text_size">16sp</dimen>
+	<dimen name="doctors_settings_activity_avatar_temp_image_view_margin_top">88dp</dimen>
+	<dimen name="doctors_settings_activity_information_text_view_margin_top">30dp</dimen>
+	<dimen name="doctors_settings_activity_label_four_text_view_margin_start">20dp</dimen>
+	<dimen name="doctors_settings_activity_group2_two_constraint_layout_margin_top">10dp</dimen>
+	<dimen name="doctors_settings_activity_details_text_view_margin_start">20dp</dimen>
+	<dimen name="doctors_settings_activity_slide_switch_margin_end">20dp</dimen>
+	<dimen name="doctors_settings_activity_text_text_view_margin_end">14dp</dimen>
+	<dimen name="doctors_settings_activity_information_text_view_text_size">12sp</dimen>
+	<dimen name="doctors_settings_activity_label_four_text_view_text_size">16sp</dimen>
+	<dimen name="doctors_settings_activity_label_text_view_text_size">16sp</dimen>
+	<dimen name="doctors_settings_activity_label_text_view_margin_start">20dp</dimen>
+	<dimen name="doctors_settings_activity_information_constraint_layout_height">320dp</dimen>
+	<dimen name="doctors_settings_activity_slide_two_switch_radius">16dp</dimen>
+	
+	<!-- Resources for MessageTwelveViewHolder -->
+	<dimen name="message_twelve_view_holder_path2_image_view_margin_end">19dp</dimen>
+	<dimen name="message_twelve_view_holder_we_ve_been_forced_to_text_view_margin_top">9dp</dimen>
+	<dimen name="message_twelve_view_holder_avatar_image_view_margin_top">21dp</dimen>
+	<dimen name="message_twelve_view_holder_name_text_view_margin_top">31dp</dimen>
+	<dimen name="message_twelve_view_holder_avatar_image_view_margin_start">24dp</dimen>
+	<dimen name="message_twelve_view_holder_message_height">101dp</dimen>
+	<dimen name="message_twelve_view_holder_we_ve_been_forced_to_text_view_margin_start">10dp</dimen>
+	<dimen name="message_twelve_view_holder_name_text_view_margin_start">10dp</dimen>
+	<dimen name="message_twelve_view_holder_name_text_view_text_size">16sp</dimen>
+	<dimen name="message_twelve_view_holder_we_ve_been_forced_to_text_view_text_size">10sp</dimen>
+	
+	<!-- Resources for MessageSixteenViewHolder -->
+	<dimen name="message_sixteen_view_holder_name_text_view_margin_start">10dp</dimen>
+	<dimen name="message_sixteen_view_holder_message_height">101dp</dimen>
+	<dimen name="message_sixteen_view_holder_avatar_image_view_margin_start">25dp</dimen>
+	<dimen name="message_sixteen_view_holder_name_text_view_text_size">16sp</dimen>
+	<dimen name="message_sixteen_view_holder_the_water_so_testy_ytext_view_margin_top">9dp</dimen>
+	<dimen name="message_sixteen_view_holder_avatar_image_view_margin_top">25dp</dimen>
+	<dimen name="message_sixteen_view_holder_name_text_view_margin_top">31dp</dimen>
+	<dimen name="message_sixteen_view_holder_the_water_so_testy_ytext_view_text_size">10sp</dimen>
+	<dimen name="message_sixteen_view_holder_the_water_so_testy_ytext_view_margin_end">45dp</dimen>
+	<dimen name="message_sixteen_view_holder_path2_image_view_margin_end">19dp</dimen>
+	
+	<!-- Resources for PatientDetailsActivity -->
+	<dimen name="patient_details_activity_at4pm_text_view_margin_start">9dp</dimen>
+	<dimen name="patient_details_activity_avatar_image_view_margin_start">10dp</dimen>
+	<dimen name="patient_details_activity_information_constraint_layout_height">190dp</dimen>
+	<dimen name="patient_details_activity_ui_settings_cell_three_constraint_layout_height">60dp</dimen>
+	<dimen name="patient_details_activity_details_text_view_text_size">12sp</dimen>
+	<dimen name="patient_details_activity_text_three_text_view_text_size">16sp</dimen>
+	<dimen name="patient_details_activity_text_text_view_margin_end">14dp</dimen>
+	<dimen name="patient_details_activity_ui_settings_cell_constraint_layout_height">60dp</dimen>
+	<dimen name="patient_details_activity_assigned_doctor_text_view_margin_start">9dp</dimen>
+	<dimen name="patient_details_activity_coming_constraint_layout_width">41dp</dimen>
+	<dimen name="patient_details_activity_path2_two_image_view_margin_end">19dp</dimen>
+	<dimen name="patient_details_activity_coming_constraint_layout_margin_top">27dp</dimen>
+	<dimen name="patient_details_activity_done_text_view_text_size">14sp</dimen>
+	<dimen name="patient_details_activity_text_two_text_view_margin_end">14dp</dimen>
+	<dimen name="patient_details_activity_label_text_view_margin_start">20dp</dimen>
+	<dimen name="patient_details_activity_label_two_text_view_text_size">16sp</dimen>
+	<dimen name="patient_details_activity_ui_settings_cell_three_constraint_layout_margin_top">9dp</dimen>
+	<dimen name="patient_details_activity_completed_text_view_margin_top">24dp</dimen>
+	<dimen name="patient_details_activity_coming_constraint_layout_height">48dp</dimen>
+	<dimen name="patient_details_activity_label_three_text_view_margin_start">20dp</dimen>
+	<dimen name="patient_details_activity_assigned_doctor_text_view_text_size">10sp</dimen>
+	<dimen name="patient_details_activity_details_text_view_margin_start">20dp</dimen>
+	<dimen name="patient_details_activity_completed_text_view_margin_start">9dp</dimen>
+	<dimen name="patient_details_activity_assigned_doctor_text_view_margin_top">3dp</dimen>
+	<dimen name="patient_details_activity_footer_constraint_layout_height">95dp</dimen>
+	<dimen name="patient_details_activity_group_image_view_margin_start">9dp</dimen>
+	<dimen name="patient_details_activity_bg_constraint_layout_height">80dp</dimen>
+	<dimen name="patient_details_activity_at4pm_text_view_text_size">10sp</dimen>
+	<dimen name="patient_details_activity_text_two_text_view_text_size">16sp</dimen>
+	<dimen name="patient_details_activity_assignment_text_view_margin_start">20dp</dimen>
+	<dimen name="patient_details_activity_assignment_text_view_text_size">12sp</dimen>
+	<dimen name="patient_details_activity_path2_image_view_margin_end">19dp</dimen>
+	<dimen name="patient_details_activity_coming_constraint_layout_margin_end">27dp</dimen>
+	<dimen name="patient_details_activity_at4pm_text_view_margin_top">7dp</dimen>
+	<dimen name="patient_details_activity_ui_settings_cell_constraint_layout_margin_top">10dp</dimen>
+	<dimen name="patient_details_activity_label_two_text_view_margin_start">20dp</dimen>
+	<dimen name="patient_details_activity_path2_three_image_view_margin_end">19dp</dimen>
+	<dimen name="patient_details_activity_group_image_view_margin_end">2dp</dimen>
+	<dimen name="patient_details_activity_text_three_text_view_margin_end">14dp</dimen>
+	<dimen name="patient_details_activity_label_text_view_text_size">16sp</dimen>
+	<dimen name="patient_details_activity_bg_constraint_layout_margin_top">15dp</dimen>
+	<dimen name="patient_details_activity_information_constraint_layout_margin_top">64dp</dimen>
+	<dimen name="patient_details_activity_label_three_text_view_text_size">16sp</dimen>
+	<dimen name="patient_details_activity_completed_text_view_text_size">14sp</dimen>
+	<dimen name="patient_details_activity_text_text_view_text_size">16sp</dimen>
+	<dimen name="patient_details_activity_ui_settings_cell_two_constraint_layout_height">60dp</dimen>
+	
+	<!-- Resources for MessageTenViewHolder -->
+	<dimen name="message_ten_view_holder_the_water_so_testy_ytext_view_margin_top">9dp</dimen>
+	<dimen name="message_ten_view_holder_the_water_so_testy_ytext_view_text_size">10sp</dimen>
+	<dimen name="message_ten_view_holder_path2_image_view_margin_end">19dp</dimen>
+	<dimen name="message_ten_view_holder_the_water_so_testy_ytext_view_margin_end">45dp</dimen>
+	<dimen name="message_ten_view_holder_name_text_view_margin_top">31dp</dimen>
+	<dimen name="message_ten_view_holder_name_text_view_margin_start">10dp</dimen>
+	<dimen name="message_ten_view_holder_avatar_image_view_margin_start">24dp</dimen>
+	<dimen name="message_ten_view_holder_name_text_view_text_size">16sp</dimen>
+	<dimen name="message_ten_view_holder_message_height">101dp</dimen>
+	
+	<!-- Resources for MessageThirteenViewHolder -->
+	<dimen name="message_thirteen_view_holder_name_text_view_margin_top">31dp</dimen>
+	<dimen name="message_thirteen_view_holder_the_needs_of_the_few_text_view_text_size">10sp</dimen>
+	<dimen name="message_thirteen_view_holder_path2_image_view_margin_end">19dp</dimen>
+	<dimen name="message_thirteen_view_holder_avatar_image_view_margin_start">15dp</dimen>
+	<dimen name="message_thirteen_view_holder_the_needs_of_the_few_text_view_margin_top">9dp</dimen>
+	<dimen name="message_thirteen_view_holder_the_needs_of_the_few_text_view_margin_end">47dp</dimen>
+	<dimen name="message_thirteen_view_holder_name_text_view_text_size">16sp</dimen>
+	<dimen name="message_thirteen_view_holder_name_text_view_margin_start">16dp</dimen>
+	<dimen name="message_thirteen_view_holder_message_height">100dp</dimen>
+	
+	<!-- Resources for NursePatientsActivity -->
+	<dimen name="nurse_patients_activity_messages_recycler_view_margin_top">64dp</dimen>
+	
+	<!-- Resources for MessageThreeViewHolder -->
+	<dimen name="message_three_view_holder_message_height">101dp</dimen>
+	<dimen name="message_three_view_holder_name_text_view_margin_top">31dp</dimen>
+	<dimen name="message_three_view_holder_how_do_you_go_to_the_text_view_margin_start">18dp</dimen>
+	<dimen name="message_three_view_holder_how_do_you_go_to_the_text_view_margin_top">9dp</dimen>
+	<dimen name="message_three_view_holder_avatar_image_view_margin_top">20dp</dimen>
+	<dimen name="message_three_view_holder_avatar_image_view_margin_start">17dp</dimen>
+	<dimen name="message_three_view_holder_how_do_you_go_to_the_text_view_text_size">10sp</dimen>
+	<dimen name="message_three_view_holder_name_text_view_margin_start">18dp</dimen>
+	<dimen name="message_three_view_holder_path2_image_view_margin_end">19dp</dimen>
+	<dimen name="message_three_view_holder_name_text_view_text_size">16sp</dimen>
+</resources>

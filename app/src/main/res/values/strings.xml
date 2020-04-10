@@ -1,0 +1,232 @@
+<resources>
+	
+	<!-- Project level resources -->
+	<string name="doctors_settings_activity_menu_item_title">Settings</string>
+	<string name="patient_home_activity_title">Patient Home</string>
+	<string name="nurse_patients_activity_title">Nurse - Patients</string>
+	<string name="nurse_doctors_activity_menu_item_title">Doctors</string>
+	<string name="doctors_patients_activity_menu_item_title">Patients</string>
+	<string name="patient_home_activity_menu_item_title">Home</string>
+	<string name="doctors_settings_activity_title">Doctor - Status</string>
+	<string name="nurse_patients_activity_menu_item_title">Patients</string>
+	<string name="nurse_doctors_activity_title">Nurse - Doctors</string>
+	<string name="doctors_patients_activity_title">Doctor - Patients</string>
+	<string name="app_name">Kram</string>
+	<string name="patient_info_activity_menu_item_title">Info</string>
+	<string name="patient_info_activity_title">Patient Info</string>
+	<string name="patient_details_activity_title">Edit patient</string>
+	
+	<!-- Resources for MessageElevenViewHolder -->
+	<string name="message_eleven_view_holder_finally_having_adat_text_view_text">Finally having a date with Pam, took like 10 years.</string>
+	<string name="message_eleven_view_holder_finally_having_adat_text_view_hint">Finally having a date with Pam, took like 10 years.</string>
+	<string name="message_eleven_view_holder_name_text_view_hint">Jack O’ Kneel</string>
+	<string name="message_eleven_view_holder_name_text_view_text">Jack O’ Kneel</string>
+	
+	<!-- Resources for MessageTenViewHolder -->
+	<string name="message_ten_view_holder_name_text_view_text">Lukewarm Skywater</string>
+	<string name="message_ten_view_holder_the_water_so_testy_ytext_view_text">The water so testy your own dad will kill you for it</string>
+	<string name="message_ten_view_holder_the_water_so_testy_ytext_view_hint">The water so testy your own dad will kill you for it</string>
+	<string name="message_ten_view_holder_name_text_view_hint">Lukewarm Skywater</string>
+	
+	<!-- Resources for LoginActivity -->
+	<string name="login_activity_your_name_edit_text_hint">Your name</string>
+	<string name="login_activity_your_patient_id_edit_text_hint">Your patient id</string>
+	<string name="login_activity_login_button_hint">LOG IN</string>
+	<string name="login_activity_login_button_text">LOG IN</string>
+	<string name="login_activity_login_text_view_hint">Login </string>
+	<string name="login_activity_welcome_back_text_view_hint">Please enter your patient id</string>
+	<string name="login_activity_welcome_back_text_view_text">Please enter your patient id</string>
+	<string name="login_activity_login_text_view_text">Login </string>
+	
+	<!-- Resources for MessageTwelveViewHolder -->
+	<string name="message_twelve_view_holder_we_ve_been_forced_to_text_view_text">We’ve been forced to add you a new friend</string>
+	<string name="message_twelve_view_holder_name_text_view_hint">Mrs. Doya</string>
+	<string name="message_twelve_view_holder_name_text_view_text">Mrs. Doya</string>
+	<string name="message_twelve_view_holder_we_ve_been_forced_to_text_view_hint">We’ve been forced to add you a new friend</string>
+	
+	<!-- Resources for MessageSixViewHolder -->
+	<string name="message_six_view_holder_name_text_view_text">Mrs. Doya</string>
+	<string name="message_six_view_holder_name_text_view_hint">Mrs. Doya</string>
+	<string name="message_six_view_holder_we_ve_been_forced_to_text_view_hint">We’ve been forced to add you a new friend</string>
+	<string name="message_six_view_holder_we_ve_been_forced_to_text_view_text">We’ve been forced to add you a new friend</string>
+	
+	<!-- Resources for MessageSeventeenViewHolder -->
+	<string name="message_seventeen_view_holder_name_text_view_text">Jack O’ Kneel</string>
+	<string name="message_seventeen_view_holder_name_text_view_hint">Jack O’ Kneel</string>
+	<string name="message_seventeen_view_holder_finally_having_adat_text_view_text">Finally having a date with Pam, took like 10 years.</string>
+	<string name="message_seventeen_view_holder_finally_having_adat_text_view_hint">Finally having a date with Pam, took like 10 years.</string>
+	
+	<!-- Resources for WelcomeActivity -->
+	<string name="welcome_activity_ellen_leya_text_view_text">© 2020 Ellen &amp; Leya</string>
+	<string name="welcome_activity_patientloginbutton_button_text">PATIENT</string>
+	<string name="welcome_activity_nurseloginbutton_button_text">NURSE</string>
+	<string name="welcome_activity_ellen_leya_text_view_hint">© 2020 Ellen &amp; Leya</string>
+	<string name="welcome_activity_doctorloginbutton_button_hint">DOCTOR\n</string>
+	<string name="welcome_activity_conquer_the_stars_text_view_text">Modernizing patient care</string>
+	<string name="welcome_activity_conquer_the_stars_text_view_hint">Modernizing patient care</string>
+	<string name="welcome_activity_doctorloginbutton_button_text">DOCTOR\n</string>
+	<string name="welcome_activity_kram_text_view_hint">Kram</string>
+	<string name="welcome_activity_patientloginbutton_button_hint">PATIENT</string>
+	<string name="welcome_activity_kram_text_view_text">Kram</string>
+	<string name="welcome_activity_nurseloginbutton_button_hint">NURSE</string>
+	
+	<!-- Resources for SignupActivity -->
+	<string name="signup_activity_it_sfree_text_view_text">Please enter more details below</string>
+	<string name="signup_activity_sign_up_button_hint">SUBMIT</string>
+	<string name="signup_activity_it_sfree_text_view_hint">Please enter more details below</string>
+	<string name="signup_activity_welcome_text_view_text">Welcome</string>
+	<string name="signup_activity_are_you_adoctor_text_view_hint">Are you a doctor?</string>
+	<string name="signup_activity_sign_up_button_text">SUBMIT</string>
+	<string name="signup_activity_are_you_adoctor_text_view_text">Are you a doctor?</string>
+	<string name="signup_activity_are_you_anurse_text_view_text">Are you a nurse?</string>
+	<string name="signup_activity_are_you_anurse_text_view_hint">Are you a nurse?</string>
+	<string name="signup_activity_welcome_text_view_hint">Welcome</string>
+	<string name="signup_activity_speciality_edit_text_hint">Speciality</string>
+	<string name="signup_activity_hospital_name_edit_text_hint">Hospital Name</string>
+	
+	<!-- Resources for MessageSevenViewHolder -->
+	<string name="message_seven_view_holder_name_text_view_hint">Vulcan</string>
+	<string name="message_seven_view_holder_the_needs_of_the_few_text_view_text">The needs of the few outweight the needs of the many.</string>
+	<string name="message_seven_view_holder_the_needs_of_the_few_text_view_hint">The needs of the few outweight the needs of the many.</string>
+	<string name="message_seven_view_holder_name_text_view_text">Vulcan</string>
+	
+	<!-- Resources for MessageFourViewHolder -->
+	<string name="message_four_view_holder_name_text_view_text">Lukewarm Skywater</string>
+	<string name="message_four_view_holder_name_text_view_hint">Lukewarm Skywater</string>
+	<string name="message_four_view_holder_the_water_so_testy_ytext_view_hint">The water so testy your own dad will kill you for it</string>
+	<string name="message_four_view_holder_the_water_so_testy_ytext_view_text">The water so testy your own dad will kill you for it</string>
+	
+	<!-- Resources for MessageFiveViewHolder -->
+	<string name="message_five_view_holder_name_text_view_hint">Jack O’ Kneel</string>
+	<string name="message_five_view_holder_finally_having_adat_text_view_hint">Finally having a date with Pam, took like 10 years.</string>
+	<string name="message_five_view_holder_name_text_view_text">Jack O’ Kneel</string>
+	<string name="message_five_view_holder_finally_having_adat_text_view_text">Finally having a date with Pam, took like 10 years.</string>
+	
+	<!-- Resources for MessageNineViewHolder -->
+	<string name="message_nine_view_holder_how_do_you_go_to_the_text_view_hint">How do you go to the bathroom in the suit?</string>
+	<string name="message_nine_view_holder_how_do_you_go_to_the_text_view_text">How do you go to the bathroom in the suit?</string>
+	<string name="message_nine_view_holder_name_text_view_hint">Tony Spark</string>
+	<string name="message_nine_view_holder_name_text_view_text">Tony Spark</string>
+	
+	<!-- Resources for MessageTwoViewHolder -->
+	<string name="message_two_view_holder_i_mtelling_you_the_text_view_hint">I’m telling you, they are amongst us! #scared</string>
+	<string name="message_two_view_holder_name_text_view_text">Fox Murder</string>
+	<string name="message_two_view_holder_i_mtelling_you_the_text_view_text">I’m telling you, they are amongst us! #scared</string>
+	<string name="message_two_view_holder_name_text_view_hint">Fox Murder</string>
+	
+	<!-- Resources for MessageThirteenViewHolder -->
+	<string name="message_thirteen_view_holder_name_text_view_text">Vulcan</string>
+	<string name="message_thirteen_view_holder_the_needs_of_the_few_text_view_text">The needs of the few outweight the needs of the many.</string>
+	<string name="message_thirteen_view_holder_name_text_view_hint">Vulcan</string>
+	<string name="message_thirteen_view_holder_the_needs_of_the_few_text_view_hint">The needs of the few outweight the needs of the many.</string>
+	
+	<!-- Resources for MessageSixteenViewHolder -->
+	<string name="message_sixteen_view_holder_the_water_so_testy_ytext_view_text">The water so testy your own dad will kill you for it</string>
+	<string name="message_sixteen_view_holder_name_text_view_hint">Lukewarm Skywater</string>
+	<string name="message_sixteen_view_holder_the_water_so_testy_ytext_view_hint">The water so testy your own dad will kill you for it</string>
+	<string name="message_sixteen_view_holder_name_text_view_text">Lukewarm Skywater</string>
+	
+	<!-- Resources for PatientInfoActivity -->
+	<string name="patient_info_activity_traveler_dreamer_text_view_hint">Welcome to our hospital</string>
+	<string name="patient_info_activity_traveler_dreamer_text_view_text">Welcome to our hospital</string>
+	
+	<!-- Resources for PatientHomeActivity -->
+	<string name="patient_home_activity_peter_text_view_hint">Peter</string>
+	<string name="patient_home_activity_expected_min_text_view_hint">Expected\n(min)</string>
+	<string name="patient_home_activity_traveler_dreamer_text_view_hint">Welcome to our hospital</string>
+	<string name="patient_home_activity_text_view_three_text_view_text">4</string>
+	<string name="patient_home_activity_patients_ahead_text_view_text">Patients\n(ahead)</string>
+	<string name="patient_home_activity_text_view_text_view_text">2</string>
+	<string name="patient_home_activity_text_view_text_view_hint">2</string>
+	<string name="patient_home_activity_text_view_three_text_view_hint">4</string>
+	<string name="patient_home_activity_severity_text_view_text">Severity</string>
+	<string name="patient_home_activity_peter_text_view_text">Peter</string>
+	<string name="patient_home_activity_severity_text_view_hint">Severity</string>
+	<string name="patient_home_activity_text_view_two_text_view_text">20</string>
+	<string name="patient_home_activity_expected_min_text_view_text">Expected\n(min)</string>
+	<string name="patient_home_activity_text_view_two_text_view_hint">20</string>
+	<string name="patient_home_activity_traveler_dreamer_text_view_text">Welcome to our hospital</string>
+	<string name="patient_home_activity_waiting_since1012_text_view_hint">Waiting since 10:12 am</string>
+	<string name="patient_home_activity_patients_ahead_text_view_hint">Patients\n(ahead)</string>
+	<string name="patient_home_activity_waiting_since1012_text_view_text">Waiting since 10:12 am</string>
+	
+	<!-- Resources for MessageEighteenViewHolder -->
+	<string name="message_eighteen_view_holder_we_ve_been_forced_to_text_view_hint">We’ve been forced to add you a new friend</string>
+	<string name="message_eighteen_view_holder_name_text_view_text">Mrs. Doya</string>
+	<string name="message_eighteen_view_holder_we_ve_been_forced_to_text_view_text">We’ve been forced to add you a new friend</string>
+	<string name="message_eighteen_view_holder_name_text_view_hint">Mrs. Doya</string>
+	
+	<!-- Resources for DoctorsSettingsActivity -->
+	<string name="doctors_settings_activity_text_text_view_text">Dr. Where</string>
+	<string name="doctors_settings_activity_label_four_text_view_hint">On call</string>
+	<string name="doctors_settings_activity_label_two_text_view_text">Specialty</string>
+	<string name="doctors_settings_activity_label_three_text_view_hint">Away</string>
+	<string name="doctors_settings_activity_information_text_view_hint">INFORMATION</string>
+	<string name="doctors_settings_activity_details_text_view_hint">DETAILS</string>
+	<string name="doctors_settings_activity_label_text_view_text">Name</string>
+	<string name="doctors_settings_activity_details_text_view_text">DETAILS</string>
+	<string name="doctors_settings_activity_text_two_text_view_text">Surgery</string>
+	<string name="doctors_settings_activity_text_text_view_hint">Dr. Where</string>
+	<string name="doctors_settings_activity_label_three_text_view_text">Away</string>
+	<string name="doctors_settings_activity_label_text_view_hint">Name</string>
+	<string name="doctors_settings_activity_information_text_view_text">INFORMATION</string>
+	<string name="doctors_settings_activity_text_two_text_view_hint">Surgery</string>
+	<string name="doctors_settings_activity_label_two_text_view_hint">Specialty</string>
+	<string name="doctors_settings_activity_label_four_text_view_text">On call</string>
+	
+	<!-- Resources for MessageEightViewHolder -->
+	<string name="message_eight_view_holder_i_mtelling_you_the_text_view_text">I’m telling you, they are amongst us! #scared</string>
+	<string name="message_eight_view_holder_name_text_view_hint">Fox Murder</string>
+	<string name="message_eight_view_holder_name_text_view_text">Fox Murder</string>
+	<string name="message_eight_view_holder_i_mtelling_you_the_text_view_hint">I’m telling you, they are amongst us! #scared</string>
+	
+	<!-- Resources for MessageFifteenViewHolder -->
+	<string name="message_fifteen_view_holder_name_text_view_hint">Tony Spark</string>
+	<string name="message_fifteen_view_holder_how_do_you_go_to_the_text_view_hint">How do you go to the bathroom in the suit?</string>
+	<string name="message_fifteen_view_holder_name_text_view_text">Tony Spark</string>
+	<string name="message_fifteen_view_holder_how_do_you_go_to_the_text_view_text">How do you go to the bathroom in the suit?</string>
+	
+	<!-- Resources for MessageFourteenViewHolder -->
+	<string name="message_fourteen_view_holder_i_mtelling_you_the_text_view_hint">I’m telling you, they are amongst us! #scared</string>
+	<string name="message_fourteen_view_holder_name_text_view_text">Fox Murder</string>
+	<string name="message_fourteen_view_holder_name_text_view_hint">Fox Murder</string>
+	<string name="message_fourteen_view_holder_i_mtelling_you_the_text_view_text">I’m telling you, they are amongst us! #scared</string>
+	
+	<!-- Resources for MessageThreeViewHolder -->
+	<string name="message_three_view_holder_how_do_you_go_to_the_text_view_hint">How do you go to the bathroom in the suit?</string>
+	<string name="message_three_view_holder_name_text_view_text">Tony Spark</string>
+	<string name="message_three_view_holder_name_text_view_hint">Tony Spark</string>
+	<string name="message_three_view_holder_how_do_you_go_to_the_text_view_text">How do you go to the bathroom in the suit?</string>
+	
+	<!-- Resources for PatientDetailsActivity -->
+	<string name="patient_details_activity_label_two_text_view_text">Severity</string>
+	<string name="patient_details_activity_assigned_doctor_text_view_hint">Assigned doctor</string>
+	<string name="patient_details_activity_assigned_doctor_text_view_text">Assigned doctor</string>
+	<string name="patient_details_activity_completed_text_view_text">Completed?</string>
+	<string name="patient_details_activity_assignment_text_view_text">ASSIGNMENT</string>
+	<string name="patient_details_activity_label_three_text_view_hint">Doctor</string>
+	<string name="patient_details_activity_done_text_view_text">  Done</string>
+	<string name="patient_details_activity_text_text_view_text">Peter P</string>
+	<string name="patient_details_activity_at4pm_text_view_text">At 4pm</string>
+	<string name="patient_details_activity_text_two_text_view_text">2</string>
+	<string name="patient_details_activity_at4pm_text_view_hint">At 4pm</string>
+	<string name="patient_details_activity_label_three_text_view_text">Doctor</string>
+	<string name="patient_details_activity_completed_text_view_hint">Completed?</string>
+	<string name="patient_details_activity_label_text_view_text">Name</string>
+	<string name="patient_details_activity_assignment_text_view_hint">ASSIGNMENT</string>
+	<string name="patient_details_activity_details_text_view_text">DETAILS</string>
+	<string name="patient_details_activity_text_text_view_hint">Peter P</string>
+	<string name="patient_details_activity_text_three_text_view_text">Dr. Stevens</string>
+	<string name="patient_details_activity_text_three_text_view_hint">Dr. Stevens</string>
+	<string name="patient_details_activity_done_text_view_hint">  Done</string>
+	<string name="patient_details_activity_label_text_view_hint">Name</string>
+	<string name="patient_details_activity_text_two_text_view_hint">2</string>
+	<string name="patient_details_activity_label_two_text_view_hint">Severity</string>
+	<string name="patient_details_activity_details_text_view_hint">DETAILS</string>
+	
+	<!-- Resources for MessageViewHolder -->
+	<string name="message_view_holder_the_needs_of_the_few_text_view_text">The needs of the few outweight the needs of the many.</string>
+	<string name="message_view_holder_the_needs_of_the_few_text_view_hint">The needs of the few outweight the needs of the many.</string>
+	<string name="message_view_holder_name_text_view_text">Vulcan</string>
+	<string name="message_view_holder_name_text_view_hint">Vulcan</string>
+</resources>

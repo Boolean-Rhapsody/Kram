@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "137705000161",
+    "firebase_url": "https://kram-c6ba7.firebaseio.com",
+    "project_id": "kram-c6ba7",
+    "storage_bucket": "kram-c6ba7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:137705000161:android:1732bd7fe4b915b10dfba0",
+        "android_client_info": {
+          "package_name": "com.booleanrhapsody.kram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "137705000161-oe1de10ut7qegetf890vcmlst9u29cen.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.booleanrhapsody.kram",
+            "certificate_hash": "9a0b8d7a29ab0efdce028d32f9308fc94d348e3c"
+          }
+        },
+        {
+          "client_id": "137705000161-a5ujg3eocm8t5ptcpng5ik2t5qmi7cet.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD65MPa7g0y11SbOnZdGwBkmArfKLtzXHg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "137705000161-a5ujg3eocm8t5ptcpng5ik2t5qmi7cet.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

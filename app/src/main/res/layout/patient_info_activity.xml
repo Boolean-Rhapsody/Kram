@@ -1,0 +1,66 @@
+<layout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<data/>
+
+	<android.support.constraint.ConstraintLayout
+		android:id="@+id/patientinfo_constraint_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/patient_info_activity_patientinfo_constraint_layout_background_color">
+	
+		<android.support.constraint.ConstraintLayout
+			android:id="@+id/header_constraint_layout"
+			android:layout_width="@dimen/patient_info_activity_header_constraint_layout_width"
+			android:layout_height="@dimen/patient_info_activity_header_constraint_layout_height"
+			android:layout_marginTop="@dimen/patient_info_activity_header_constraint_layout_margin_top"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:layout_editor_absoluteX="38dp"
+			tools:layout_editor_absoluteY="102dp">
+		
+			<ImageView
+				android:id="@+id/patient_image_view"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:scaleType="center"
+				android:src="@drawable/patient_2"
+				app:layout_constraintLeft_toLeftOf="parent"
+				app:layout_constraintRight_toRightOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				tools:layout_editor_absoluteX="84dp"
+				tools:layout_editor_absoluteY="0dp"/>
+		
+			<TextView
+				android:id="@+id/traveler_dreamer_text_view"
+				android:layout_width="0dp"
+				android:layout_height="@dimen/patient_info_activity_traveler_dreamer_text_view_height"
+				android:layout_marginEnd="@dimen/patient_info_activity_traveler_dreamer_text_view_margin_end"
+				android:layout_marginStart="@dimen/patient_info_activity_traveler_dreamer_text_view_margin_start"
+				android:layout_marginTop="@dimen/patient_info_activity_traveler_dreamer_text_view_margin_top"
+				android:fontFamily="@font/font_lato_regular"
+				android:gravity="center"
+				android:lineSpacingMultiplier="1.18"
+				android:text="@string/patient_info_activity_traveler_dreamer_text_view_text"
+				android:textColor="#000000"
+				android:textSize="@dimen/patient_info_activity_traveler_dreamer_text_view_text_size"
+				app:layout_constraintHorizontal_weight="0.51"
+				app:layout_constraintLeft_toLeftOf="parent"
+				app:layout_constraintRight_toRightOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/patient_image_view"
+				tools:layout_editor_absoluteX="74dp"
+				tools:layout_editor_absoluteY="165dp"/>
+		</android.support.constraint.ConstraintLayout>
+	
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/toolbar"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toTopOf="parent"/>
+	</android.support.constraint.ConstraintLayout>
+</layout>

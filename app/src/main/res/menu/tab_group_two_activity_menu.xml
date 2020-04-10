@@ -1,0 +1,16 @@
+<menu
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<item
+		android:id="@+id/patient_home_activity_menu_item"
+		android:icon="@drawable/active_icon_2"
+		android:title="@string/patient_home_activity_menu_item_title"
+		app:showAsAction="ifRoom"/>
+
+	<item
+		android:id="@+id/patient_info_activity_menu_item"
+		android:icon="@drawable/active_icon"
+		android:title="@string/patient_info_activity_menu_item_title"
+		app:showAsAction="ifRoom"/>
+</menu>

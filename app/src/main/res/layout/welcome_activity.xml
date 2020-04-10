@@ -1,0 +1,182 @@
+<layout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<data/>
+
+	<android.support.constraint.ConstraintLayout
+		android:id="@+id/welcome_constraint_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/welcome_activity_welcome_constraint_layout_background_color">
+	
+		<TextView
+			android:id="@+id/kram_text_view"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/welcome_activity_kram_text_view_margin_top"
+			android:fontFamily="@font/font_lato_bold"
+			android:gravity="center"
+			android:letterSpacing="-0.05"
+			android:text="@string/welcome_activity_kram_text_view_text"
+			android:textColor="#FFFFFF"
+			android:textSize="@dimen/welcome_activity_kram_text_view_text_size"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/hospital_image_view"
+			tools:layout_editor_absoluteX="141dp"
+			tools:layout_editor_absoluteY="280dp"/>
+	
+		<TextView
+			android:id="@+id/conquer_the_stars_text_view"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/welcome_activity_conquer_the_stars_text_view_margin_top"
+			android:fontFamily="@font/font_lato_regular"
+			android:gravity="center"
+			android:text="@string/welcome_activity_conquer_the_stars_text_view_text"
+			android:textColor="#FFFFFF"
+			android:textSize="@dimen/welcome_activity_conquer_the_stars_text_view_text_size"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/kram_text_view"
+			tools:layout_editor_absoluteX="90dp"
+			tools:layout_editor_absoluteY="350dp"/>
+	
+		<ImageView
+			android:id="@+id/hospital_image_view"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/welcome_activity_hospital_image_view_margin_top"
+			android:scaleType="center"
+			android:src="@drawable/hospital"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:layout_editor_absoluteX="128dp"
+			tools:layout_editor_absoluteY="100dp"/>
+	
+		<android.support.constraint.ConstraintLayout
+			android:id="@+id/loginbutton_constraint_layout"
+			android:layout_width="@dimen/welcome_activity_loginbutton_constraint_layout_width"
+			android:layout_height="@dimen/welcome_activity_loginbutton_constraint_layout_height"
+			android:layout_marginBottom="@dimen/welcome_activity_loginbutton_constraint_layout_margin_bottom"
+			app:layout_constraintBottom_toTopOf="@+id/ellen_leya_text_view"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			tools:layout_editor_absoluteX="114dp"
+			tools:layout_editor_absoluteY="404dp">
+		
+			<LinearLayout
+				android:id="@+id/nurseloginbutton_button"
+				android:layout_width="0dp"
+				android:layout_height="@dimen/welcome_activity_nurseloginbutton_button_height"
+				android:background="@drawable/welcome_activity_nurseloginbutton_button_ripple"
+				android:gravity="center"
+				android:orientation="horizontal"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintHorizontal_weight="1"
+				app:layout_constraintLeft_toLeftOf="parent"
+				app:layout_constraintRight_toRightOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				tools:layout_editor_absoluteX="0dp"
+				tools:layout_editor_absoluteY="76dp"
+				style="@style/Widget.AppCompat.Button">
+			
+				<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/icon_log_in_2"/>
+			
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="@dimen/welcome_activity_nurseloginbutton_button_image_padding"
+					android:fontFamily="@font/font_lato_bold"
+					android:gravity="center"
+					android:text="@string/welcome_activity_nurseloginbutton_button_text"
+					android:textColor="@color/welcome_activity_nurseloginbutton_button_text_color"
+					android:textSize="@dimen/welcome_activity_nurseloginbutton_button_text_size"/>
+			</LinearLayout>
+		
+			<LinearLayout
+				android:id="@+id/doctorloginbutton_button"
+				android:layout_width="0dp"
+				android:layout_height="@dimen/welcome_activity_doctorloginbutton_button_height"
+				android:background="@drawable/welcome_activity_doctorloginbutton_button_ripple"
+				android:gravity="center"
+				android:orientation="horizontal"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintHorizontal_weight="1"
+				app:layout_constraintLeft_toLeftOf="parent"
+				app:layout_constraintRight_toRightOf="parent"
+				tools:layout_editor_absoluteX="0dp"
+				tools:layout_editor_absoluteY="151dp"
+				style="@style/Widget.AppCompat.Button">
+			
+				<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/icon_log_in"/>
+			
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="@dimen/welcome_activity_doctorloginbutton_button_image_padding"
+					android:fontFamily="@font/font_lato_bold"
+					android:gravity="center"
+					android:text="@string/welcome_activity_doctorloginbutton_button_text"
+					android:textColor="@color/welcome_activity_doctorloginbutton_button_text_color"
+					android:textSize="@dimen/welcome_activity_doctorloginbutton_button_text_size"/>
+			</LinearLayout>
+		
+			<LinearLayout
+				android:id="@+id/patientloginbutton_button"
+				android:layout_width="0dp"
+				android:layout_height="@dimen/welcome_activity_patientloginbutton_button_height"
+				android:background="@drawable/welcome_activity_patientloginbutton_button_ripple"
+				android:gravity="center"
+				android:orientation="horizontal"
+				app:layout_constraintHorizontal_weight="1"
+				app:layout_constraintLeft_toLeftOf="parent"
+				app:layout_constraintRight_toRightOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				tools:layout_editor_absoluteX="0dp"
+				tools:layout_editor_absoluteY="0dp"
+				style="@style/Widget.AppCompat.Button">
+			
+				<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/icon_sign_up_2"/>
+			
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="@dimen/welcome_activity_patientloginbutton_button_image_padding"
+					android:fontFamily="@font/font_lato_bold"
+					android:gravity="center"
+					android:text="@string/welcome_activity_patientloginbutton_button_text"
+					android:textColor="@color/welcome_activity_patientloginbutton_button_text_color"
+					android:textSize="@dimen/welcome_activity_patientloginbutton_button_text_size"/>
+			</LinearLayout>
+		</android.support.constraint.ConstraintLayout>
+	
+		<TextView
+			android:id="@+id/ellen_leya_text_view"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="@dimen/welcome_activity_ellen_leya_text_view_margin_bottom"
+			android:fontFamily="@font/font_lato_regular"
+			android:gravity="center"
+			android:text="@string/welcome_activity_ellen_leya_text_view_text"
+			android:textColor="#FFFFFF"
+			android:textSize="@dimen/welcome_activity_ellen_leya_text_view_text_size"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			tools:layout_editor_absoluteX="120dp"
+			tools:layout_editor_absoluteY="629dp"/>
+	</android.support.constraint.ConstraintLayout>
+</layout>
