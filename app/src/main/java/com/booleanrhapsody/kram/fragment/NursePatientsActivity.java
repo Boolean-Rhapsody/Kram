@@ -125,6 +125,7 @@ public class NursePatientsActivity extends Fragment
 	public void onPatientSelected(DocumentSnapshot item) {
 
 		PatientModel patient = item.toObject(PatientModel.class);
+		patient.setId(item.getId());
 		GlobalModel.getInstance().setEditingPatient(patient);
 
 		Intent intent = PatientDetailsActivity.newIntent(this.getContext());

@@ -178,14 +178,16 @@
 					tools:layout_editor_absoluteX="348dp"
 					tools:layout_editor_absoluteY="23dp"/>
 			
-				<TextView
+				<EditText
 					android:id="@+id/patient_name_edit"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_marginEnd="@dimen/patient_details_activity_text_text_view_margin_end"
 					android:fontFamily="@font/font_lato_bold"
-					android:gravity="end"
-					android:text="@string/patient_details_activity_text_text_view_text"
+					android:gravity="end|center_vertical"
+					android:hint="@string/patient_details_activity_text_text_view_text"
+					android:inputType="text"
+					android:maxLines="1"
 					android:textColor="#D9676E"
 					android:textSize="@dimen/patient_details_activity_text_text_view_text_size"
 					app:layout_constraintBottom_toBottomOf="parent"
@@ -236,14 +238,16 @@
 					tools:layout_editor_absoluteX="348dp"
 					tools:layout_editor_absoluteY="23dp"/>
 			
-				<TextView
+				<EditText
 					android:id="@+id/patient_severity_edit"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_marginEnd="@dimen/patient_details_activity_text_two_text_view_margin_end"
 					android:fontFamily="@font/font_lato_bold"
-					android:gravity="end"
-					android:text="@string/patient_details_activity_text_two_text_view_text"
+					android:gravity="end|center_vertical"
+					android:hint="@string/patient_details_activity_text_two_text_view_text"
+					android:inputType="text"
+					android:maxLines="1"
 					android:textColor="#D9676E"
 					android:textSize="@dimen/patient_details_activity_text_two_text_view_text_size"
 					app:layout_constraintBottom_toBottomOf="parent"

@@ -49,6 +49,13 @@ public class PatientModel  {
                 });
     }
 
+    public static void save(PatientModel patient) {
+
+        if (patient.getId() != null) {
+            patientsCollection.document(patient.getId()).set(patient);
+        }
+    }
+
     public static void add(PatientModel patient) {
         patientsCollection.
         add(patient)
@@ -68,7 +75,8 @@ public class PatientModel  {
 
     private String name;
     private Integer severity;
-    private String uid;
+
+    private String id;
     private Date timeStamp;
 
     private Date startTime;
@@ -82,7 +90,7 @@ public class PatientModel  {
     public PatientModel(String name, Integer message, String uid) {
         this.name = name;
         severity = message;
-        this.uid = uid;
+        this.id = uid;
     }
 
     public static CollectionReference getPatientsCollection() {
@@ -109,12 +117,12 @@ public class PatientModel  {
         severity = message;
     }
 
-    public String getUid() {
-        return uid;
+    public String getId() {
+        return id;
     }
 
-    public void setUid(String uid) {
-        this.uid = uid;
+    public void setId(String id) {
+        this.id = id;
     }
 
     @ServerTimestamp
@@ -158,7 +166,7 @@ public class PatientModel  {
         PatientModel doctor = (PatientModel) o;
 
         return timeStamp.equals(doctor.timeStamp)
-                && uid.equals(doctor.uid)
+                && id.equals(doctor.id)
                 && (name == null ? doctor.name == null : name.equals(doctor.name))
                 && (severity == null ? doctor.severity == null : severity.equals(doctor.severity));
     }
@@ -167,7 +175,7 @@ public class PatientModel  {
     public int hashCode() {
         int result = name == null ? 0 : name.hashCode();
         result = 31 * result + (severity == null ? 0 : severity.hashCode());
-        result = 31 * result + uid.hashCode();
+        result = 31 * result + id.hashCode();
         result = 31 * result + timeStamp.hashCode();
         return result;
     }
@@ -177,7 +185,7 @@ public class PatientModel  {
         return "Patient{" +
                 "Name='" + name + '\'' +
                 ", Severity='" + severity + '\'' +
-                ", Uid='" + uid + '\'' +
+                ", Uid='" + id + '\'' +
                 ", Timestamp=" + timeStamp +
                 '}';
     }

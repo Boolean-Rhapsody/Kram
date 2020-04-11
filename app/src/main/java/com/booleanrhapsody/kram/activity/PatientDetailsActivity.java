@@ -69,7 +69,8 @@ public class PatientDetailsActivity extends AppCompatActivity {
 	
 		// Configure Navigation Bar #2 component
 		binding.toolbar.setBackground(new LinearGradientDrawable.Builder(this, new PointF(-0.01f, 0.51f), new PointF(1.01f, 0.49f)).addStop(0f, Color.argb(255, 247, 132, 98)).addStop(1f, Color.argb(255, 138, 27, 139)).build());
-		
+		binding.patientDoctorName.setText("Not assigned");
+
 		this.setupToolbar();
 
 		String id = getIntent().getStringExtra("id");
@@ -96,6 +97,15 @@ public class PatientDetailsActivity extends AppCompatActivity {
 		if (id == null) {
 
 			PatientModel p = new PatientModel();
+			p.setName(binding.patientNameEdit.getText().toString());
+			p.setSeverity(Integer.valueOf(binding.patientSeverityEdit.getText().toString()));
+			PatientModel.add(p);
+		}
+		else {
+			PatientModel p = GlobalModel.getInstance().getEditingPatient();
+			p.setName(binding.patientNameEdit.getText().toString());
+			p.setSeverity(Integer.valueOf(binding.patientSeverityEdit.getText().toString()));
+			PatientModel.save(p);
 		}
 		this.finish();
 	}
