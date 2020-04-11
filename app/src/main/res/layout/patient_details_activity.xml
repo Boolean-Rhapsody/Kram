@@ -10,7 +10,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:background="@color/patient_details_activity_patientdetails_constraint_layout_background_color">
-	
+
 		<android.support.constraint.ConstraintLayout
 			android:id="@+id/footer_constraint_layout"
 			android:layout_width="0dp"
@@ -18,10 +18,8 @@
 			app:layout_constraintBottom_toBottomOf="parent"
 			app:layout_constraintHorizontal_weight="1"
 			app:layout_constraintLeft_toLeftOf="parent"
-			app:layout_constraintRight_toRightOf="parent"
-			tools:layout_editor_absoluteX="0dp"
-			tools:layout_editor_absoluteY="572dp">
-		
+			app:layout_constraintRight_toRightOf="parent">
+
 			<View
 				android:id="@+id/bg_constraint_layout"
 				android:layout_width="0dp"
@@ -31,42 +29,22 @@
 				app:layout_constraintHorizontal_weight="1"
 				app:layout_constraintLeft_toLeftOf="parent"
 				app:layout_constraintRight_toRightOf="parent"
-				app:layout_constraintTop_toTopOf="parent"
-				tools:layout_editor_absoluteX="0dp"
-				tools:layout_editor_absoluteY="15dp"/>
-		
+				app:layout_constraintTop_toTopOf="parent" />
+
 			<TextView
 				android:id="@+id/completed_text_view"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:layout_marginStart="@dimen/patient_details_activity_completed_text_view_margin_start"
-				android:layout_marginTop="@dimen/patient_details_activity_completed_text_view_margin_top"
+				android:layout_marginLeft="12dp"
+				android:layout_marginTop="32dp"
 				android:fontFamily="@font/font_lato_bold"
 				android:gravity="start"
-				android:text="@string/patient_details_activity_completed_text_view_text"
+				android:text="ID:"
 				android:textColor="@color/patient_details_activity_completed_text_view_text_color"
-				android:textSize="@dimen/patient_details_activity_completed_text_view_text_size"
+				android:textSize="24sp"
 				app:layout_constraintLeft_toRightOf="@+id/avatar_image_view"
-				app:layout_constraintTop_toTopOf="parent"
-				tools:layout_editor_absoluteX="99dp"
-				tools:layout_editor_absoluteY="24dp"/>
-		
-			<TextView
-				android:id="@+id/assigned_doctor_text_view"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginStart="@dimen/patient_details_activity_assigned_doctor_text_view_margin_start"
-				android:layout_marginTop="@dimen/patient_details_activity_assigned_doctor_text_view_margin_top"
-				android:fontFamily="@font/font_lato_regular"
-				android:gravity="start"
-				android:text="@string/patient_details_activity_assigned_doctor_text_view_text"
-				android:textColor="#000000"
-				android:textSize="@dimen/patient_details_activity_assigned_doctor_text_view_text_size"
-				app:layout_constraintLeft_toRightOf="@+id/avatar_image_view"
-				app:layout_constraintTop_toBottomOf="@+id/completed_text_view"
-				tools:layout_editor_absoluteX="99dp"
-				tools:layout_editor_absoluteY="44dp"/>
-		
+				app:layout_constraintTop_toTopOf="parent" />
+
 			<ImageView
 				android:id="@+id/avatar_image_view"
 				android:layout_width="wrap_content"
@@ -77,35 +55,22 @@
 				app:layout_constraintLeft_toLeftOf="parent"
 				app:layout_constraintTop_toTopOf="parent"
 				tools:layout_editor_absoluteX="10dp"
-				tools:layout_editor_absoluteY="0dp"/>
-		
-			<TextView
-				android:id="@+id/at4pm_text_view"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginStart="@dimen/patient_details_activity_at4pm_text_view_margin_start"
-				android:layout_marginTop="@dimen/patient_details_activity_at4pm_text_view_margin_top"
-				android:alpha="0.4"
-				android:fontFamily="@font/font_lato_regular"
-				android:gravity="start"
-				android:text="@string/patient_details_activity_at4pm_text_view_text"
-				android:textColor="#000000"
-				android:textSize="@dimen/patient_details_activity_at4pm_text_view_text_size"
-				app:layout_constraintLeft_toRightOf="@+id/avatar_image_view"
-				app:layout_constraintTop_toBottomOf="@+id/assigned_doctor_text_view"
-				tools:layout_editor_absoluteX="99dp"
-				tools:layout_editor_absoluteY="63dp"/>
+				tools:layout_editor_absoluteY="0dp" />
 
-			<android.support.constraint.ConstraintLayout
-				android:id="@+id/coming_constraint_layout"
-				android:layout_width="@dimen/patient_details_activity_coming_constraint_layout_width"
-				android:layout_height="@dimen/patient_details_activity_coming_constraint_layout_height"
-				android:layout_marginEnd="@dimen/patient_details_activity_coming_constraint_layout_margin_end"
-				android:layout_marginTop="@dimen/patient_details_activity_coming_constraint_layout_margin_top"
-				app:layout_constraintRight_toRightOf="parent"
+			<TextView
+				android:id="@+id/textViewPatientId"
+				android:layout_width="240dp"
+				android:layout_height="44dp"
+				android:layout_marginStart="140dp"
+				android:text="0000000"
+				android:fontFamily="@font/font_lato_bold"
+				android:textColor="@android:color/black"
+				android:textSize="18sp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toTopOf="parent"
-				tools:layout_editor_absoluteX="307dp"
-				tools:layout_editor_absoluteY="27dp"/>
+				app:layout_constraintVertical_bias="0.627" />
+
 		</android.support.constraint.ConstraintLayout>
 	
 		<android.support.constraint.ConstraintLayout

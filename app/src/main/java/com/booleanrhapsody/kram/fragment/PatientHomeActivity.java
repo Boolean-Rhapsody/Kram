@@ -10,9 +10,11 @@ package com.booleanrhapsody.kram.fragment;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -23,12 +25,17 @@ import com.booleanrhapsody.kram.R;
 import com.booleanrhapsody.kram.activity.*;
 import com.booleanrhapsody.kram.databinding.PatientHomeActivityBinding;
 import com.booleanrhapsody.kram.model.GlobalModel;
+import com.booleanrhapsody.kram.model.PatientChangeListener;
+import com.booleanrhapsody.kram.model.PatientModel;
+import com.google.firebase.firestore.Query;
 
 import java.util.*;
 
 
-public class PatientHomeActivity extends Fragment {
-	
+public class PatientHomeActivity extends Fragment implements  PatientChangeListener.OnPatientChangedListener {
+
+	private static final String TAG = "PatientHomeActivity";
+
 	public static PatientHomeActivity newInstance() {
 	
 		PatientHomeActivity fragment = new PatientHomeActivity();
@@ -87,5 +94,31 @@ public class PatientHomeActivity extends Fragment {
 	private void startWelcomeActivity() {
 
 		GlobalModel.getInstance().logoutUser(this.getActivity());
+	}
+
+	@Override
+	public void onStart() {
+		super.onStart();
+
+		Query q = PatientModel.getPatientsCollection()
+				.orderBy("timestamp", Query.Direction.DESCENDING)
+				.limit(50);
+		// Start listening for Firestore updates
+		GlobalModel.getInstance().startPatientListener(q, this);
+	}
+
+	@Override
+	public void onStop() {
+		super.onStop();
+
+		GlobalModel.getInstance().stopPatientListener();
+	}
+
+	@Override
+	public void onPatientChanged() {
+
+		Log.i(TAG, "onPatientChanged");
+		Snackbar.make(this.getActivity().findViewById(android.R.id.content), "Some patient was updated",
+				Snackbar.LENGTH_SHORT).show();
 	}
 }

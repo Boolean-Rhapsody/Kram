@@ -100,6 +100,7 @@
 				android:hint="@string/login_activity_your_patient_id_edit_text_hint"
 				android:inputType="text"
 				android:maxLines="1"
+				android:text="2rO3s4MOrGAGYUYmw0jl"
 				android:textColor="@color/login_activity_your_patient_id_edit_text_text_color"
 				android:textColorHint="@color/color_hint_text"
 				android:textSize="@dimen/login_activity_your_patient_id_edit_text_text_size"

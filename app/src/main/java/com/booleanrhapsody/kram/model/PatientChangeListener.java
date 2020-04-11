@@ -17,15 +17,33 @@ import javax.annotation.Nullable;
 
 public class PatientChangeListener implements EventListener<QuerySnapshot> {
 
+    public interface OnPatientChangedListener {
+
+        void onPatientChanged();
+
+    }
+
+    private PatientChangeListener.OnPatientChangedListener listener;
+
     private static final String TAG = "PatientChangeListener";
 
     private Query query;
     private ListenerRegistration registration;
 
+    public List<DocumentSnapshot> getDocumentSnapshots() {
+        return documentSnapshots;
+    }
+
     private ArrayList<DocumentSnapshot> documentSnapshots = new ArrayList<>();
+
 
     public PatientChangeListener(Query q) {
         this.query = q;
+    }
+
+    public PatientChangeListener(Query q, PatientChangeListener.OnPatientChangedListener listener) {
+        this.query = q;
+        this.listener = listener;
     }
 
     public void recalculateStats() {
@@ -33,7 +51,7 @@ public class PatientChangeListener implements EventListener<QuerySnapshot> {
         for(DocumentSnapshot snapshot: this.documentSnapshots) {
 
             PatientModel patient = snapshot.toObject(PatientModel.class);
-            
+
         }
     }
 
@@ -62,6 +80,10 @@ public class PatientChangeListener implements EventListener<QuerySnapshot> {
                     onDocumentRemoved(change);
                     break;
             }
+        }
+
+        if (this.listener != null) {
+            this.listener.onPatientChanged();
         }
     }
 

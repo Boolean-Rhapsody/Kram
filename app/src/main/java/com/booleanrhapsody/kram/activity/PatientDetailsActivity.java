@@ -14,9 +14,11 @@ import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.graphics.PointF;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -25,6 +27,10 @@ import com.booleanrhapsody.kram.R;
 import com.booleanrhapsody.kram.databinding.PatientDetailsActivityBinding;
 import com.booleanrhapsody.kram.model.GlobalModel;
 import com.booleanrhapsody.kram.model.PatientModel;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 
 import java.util.Date;
 
@@ -32,7 +38,9 @@ import io.supernova.uitoolkit.drawable.LinearGradientDrawable;
 
 
 public class PatientDetailsActivity extends AppCompatActivity {
-	
+
+	private static final String TAG = "PatientDetailsActivity";
+
 	public static Intent newIntent(Context context) {
 	
 		// Fill the created intent with the data you want to be passed to this Activity when it's opened.
@@ -40,7 +48,9 @@ public class PatientDetailsActivity extends AppCompatActivity {
 	}
 	
 	private PatientDetailsActivityBinding binding;
-	
+
+	private PatientModel patientModel;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	
@@ -83,6 +93,8 @@ public class PatientDetailsActivity extends AppCompatActivity {
 			binding.patientNameEdit.setText(p.getName());
 			binding.patientSeverityEdit.setText(String.valueOf(p.getSeverity()));
 			binding.patientDoctorName.setText(p.getDoctor());
+
+			binding.textViewPatientId.setText(id);
 		}
 
 		String userCategory = GlobalModel.getInstance().getUserCategory();
@@ -94,9 +106,8 @@ public class PatientDetailsActivity extends AppCompatActivity {
 			binding.buttonPatientAssign.setVisibility(View.INVISIBLE);
 			binding.buttonPatientMarkDone.setVisibility(View.INVISIBLE);
 		}
-
 	}
-	
+
 	public void setupToolbar() {
 	
 		setSupportActionBar(binding.toolbar);
@@ -114,15 +125,32 @@ public class PatientDetailsActivity extends AppCompatActivity {
 			p.setSeverity(Integer.valueOf(binding.patientSeverityEdit.getText().toString()));
 			p.setHospital(GlobalModel.getInstance().getUserHospital());
 			p.setStatus(PatientModel.STATUS_WAIT);
-			PatientModel.add(p);
+			PatientModel.add(p).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
+				@Override
+				public void onComplete(@NonNull Task<DocumentReference> task) {
+					if (task.isSuccessful()) {
+						DocumentReference document = task.getResult();
+
+						p.setId(document.getId());
+						PatientModel.save(p);
+						PatientDetailsActivity.this.finish();
+
+					} else {
+						Log.d(TAG, "get failed with ", task.getException());
+						Snackbar.make(findViewById(android.R.id.content), "Failed to save patient",
+								Snackbar.LENGTH_SHORT).show();
+					}
+				}
+			});
 		}
 		else {
 			PatientModel p = GlobalModel.getInstance().getEditingPatient();
 			p.setName(binding.patientNameEdit.getText().toString());
 			p.setSeverity(Integer.valueOf(binding.patientSeverityEdit.getText().toString()));
 			PatientModel.save(p);
+			this.finish();
 		}
-		this.finish();
+
 	}
 
 	public void onClickAssignPatient (View v) {

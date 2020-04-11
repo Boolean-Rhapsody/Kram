@@ -13,6 +13,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreSettings;
+import com.google.firebase.firestore.Query;
 
 public class GlobalModel {
 
@@ -37,6 +38,8 @@ public class GlobalModel {
     public FirebaseFirestore getFirestore() {
         return firestore;
     }
+
+    private PatientChangeListener patientChangeListener;
 
     private FirebaseFirestore firestore;
     private String userCategory;
@@ -77,6 +80,24 @@ public class GlobalModel {
         firestore.setFirestoreSettings(settings);
 
         userHospital = "100";
+    }
+
+    public PatientChangeListener startPatientListener(Query q, PatientChangeListener.OnPatientChangedListener listener) {
+
+        this.stopPatientListener();
+
+        this.patientChangeListener = new PatientChangeListener(q, listener);
+        this.patientChangeListener.startListening();
+
+        return this.patientChangeListener;
+    }
+
+    public void stopPatientListener() {
+
+        if (this.patientChangeListener != null) {
+            this.patientChangeListener.stopListening();
+            this.patientChangeListener = null;
+        }
     }
 
     public FirebaseUser getCurrentUser() {
