@@ -30,7 +30,9 @@ import java.util.*;
 
 
 public class NursePatientsActivity extends Fragment {
-	
+
+	private NursePatientsActivityMessagesRecyclerViewAdapter mAdapter;
+
 	public static NursePatientsActivity newInstance() {
 	
 		NursePatientsActivity fragment = new NursePatientsActivity();
@@ -40,7 +42,7 @@ public class NursePatientsActivity extends Fragment {
 	}
 	
 	private NursePatientsActivityBinding binding;
-	protected NursePatientsActivity() {
+	public NursePatientsActivity() {
 		super();
 		setHasOptionsMenu(true);
 	}
@@ -78,19 +80,44 @@ public class NursePatientsActivity extends Fragment {
 	}
 	
 	public void onLeftItemPressed() {
-	
+
+		PatientModel p = new PatientModel();
+		p.setName("Stephen King");
+		p.setSeverity(2);
+		PatientModel.add(p);
+
 		this.startPatientDetailsActivity();
 	}
 	
 	public void init() {
-	
+
+		this.mAdapter = new NursePatientsActivityMessagesRecyclerViewAdapter(PatientModel.getPatientsQuery());
+
 		// Configure Messages component
 		binding.messagesRecyclerView.setLayoutManager(new LinearLayoutManager(this.getContext(), LinearLayoutManager.VERTICAL, false));
-		binding.messagesRecyclerView.setAdapter(new NursePatientsActivityMessagesRecyclerViewAdapter(PatientModel.getPatientsQuery()));
+		binding.messagesRecyclerView.setAdapter(this.mAdapter);
 	}
 	
 	private void startPatientDetailsActivity() {
 	
 		this.getActivity().startActivity(PatientDetailsActivity.newIntent(this.getContext()));
+	}
+
+	@Override
+	public void onStart() {
+		super.onStart();
+
+		// Start listening for Firestore updates
+		if (mAdapter != null) {
+			mAdapter.startListening();
+		}
+	}
+
+	@Override
+	public void onStop() {
+		super.onStop();
+		if (mAdapter != null) {
+			mAdapter.stopListening();
+		}
 	}
 }

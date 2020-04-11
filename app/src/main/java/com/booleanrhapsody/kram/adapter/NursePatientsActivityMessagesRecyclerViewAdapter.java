@@ -78,7 +78,7 @@ public class NursePatientsActivityMessagesRecyclerViewAdapter extends FirestoreA
 
 
 			binding.nameTextView.setText(patient.getName());
-			binding.theNeedsOfTheFewTextView.setText(patient.getSeverity());
+			binding.theNeedsOfTheFewTextView.setText(String.valueOf(patient.getSeverity()));
 
 			itemView.setOnClickListener(new View.OnClickListener() {
 				@Override
