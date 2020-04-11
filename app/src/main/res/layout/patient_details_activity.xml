@@ -179,7 +179,7 @@
 					tools:layout_editor_absoluteY="23dp"/>
 			
 				<TextView
-					android:id="@+id/text_text_view"
+					android:id="@+id/patient_name_edit"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_marginEnd="@dimen/patient_details_activity_text_text_view_margin_end"
@@ -237,7 +237,7 @@
 					tools:layout_editor_absoluteY="23dp"/>
 			
 				<TextView
-					android:id="@+id/text_two_text_view"
+					android:id="@+id/patient_severity_edit"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_marginEnd="@dimen/patient_details_activity_text_two_text_view_margin_end"
@@ -331,7 +331,7 @@
 				tools:layout_editor_absoluteY="23dp"/>
 		
 			<TextView
-				android:id="@+id/text_three_text_view"
+				android:id="@+id/patient_doctor_name"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginEnd="@dimen/patient_details_activity_text_three_text_view_margin_end"

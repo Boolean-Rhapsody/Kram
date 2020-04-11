@@ -20,12 +20,15 @@ import com.booleanrhapsody.kram.R;
 import com.booleanrhapsody.kram.activity.*;
 import com.booleanrhapsody.kram.adapter.DoctorsPatientsActivityMessagesRecyclerViewAdapter;
 import com.booleanrhapsody.kram.databinding.DoctorsPatientsActivityBinding;
+import com.booleanrhapsody.kram.model.GlobalModel;
 import com.booleanrhapsody.kram.model.PatientModel;
+import com.google.firebase.firestore.DocumentSnapshot;
 
 import java.util.*;
 
-
-public class DoctorsPatientsActivity extends Fragment {
+//implements DoctorsPatientsMessagesRecyclerViewAdapter.OnPatientSelectedListener
+public class DoctorsPatientsActivity extends Fragment
+		implements DoctorsPatientsActivityMessagesRecyclerViewAdapter.OnPatientSelectedListener{
 
 	private DoctorsPatientsActivityMessagesRecyclerViewAdapter mAdapter;
 
@@ -77,5 +80,14 @@ public class DoctorsPatientsActivity extends Fragment {
 		if (mAdapter != null) {
 			mAdapter.stopListening();
 		}
+	}
+
+	@Override
+	public void onPatientSelected(DocumentSnapshot item) {
+
+		PatientModel patient = item.toObject(PatientModel.class);
+		GlobalModel.getInstance().setEditingPatient(patient);
+
+		this.getActivity().startActivity(PatientDetailsActivity.newIntent(this.getContext()));
 	}
 }

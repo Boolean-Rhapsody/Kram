@@ -22,6 +22,9 @@ import android.view.MenuItem;
 import android.view.View;
 import com.booleanrhapsody.kram.R;
 import com.booleanrhapsody.kram.databinding.PatientDetailsActivityBinding;
+import com.booleanrhapsody.kram.model.GlobalModel;
+import com.booleanrhapsody.kram.model.PatientModel;
+
 import io.supernova.uitoolkit.drawable.LinearGradientDrawable;
 
 
@@ -68,6 +71,16 @@ public class PatientDetailsActivity extends AppCompatActivity {
 		binding.toolbar.setBackground(new LinearGradientDrawable.Builder(this, new PointF(-0.01f, 0.51f), new PointF(1.01f, 0.49f)).addStop(0f, Color.argb(255, 247, 132, 98)).addStop(1f, Color.argb(255, 138, 27, 139)).build());
 		
 		this.setupToolbar();
+
+		String id = getIntent().getStringExtra("id");
+		PatientModel p = GlobalModel.getInstance().getEditingPatient();
+
+		if (p!= null) {
+			binding.patientNameEdit.setText(p.getName());
+			binding.patientSeverityEdit.setText(String.valueOf(p.getSeverity()));
+			binding.patientDoctorName.setText(p.getDoctor());
+		}
+
 	}
 	
 	public void setupToolbar() {
@@ -78,12 +91,13 @@ public class PatientDetailsActivity extends AppCompatActivity {
 	}
 	
 	public void onLeftItemPressed() {
-	
-		//this.startNursePatientsActivity();
+
+		String id = getIntent().getStringExtra("id");
+		if (id == null) {
+
+			PatientModel p = new PatientModel();
+		}
+		this.finish();
 	}
-	
-	private void startTabGroupOneActivity() {
-	
-		//this.startActivity(NursePatientsActivity.newIntent(this));
-	}
+
 }

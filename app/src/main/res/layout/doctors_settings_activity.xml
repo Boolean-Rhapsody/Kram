@@ -50,7 +50,7 @@
 					tools:layout_editor_absoluteY="23dp"/>
 			
 				<TextView
-					android:id="@+id/text_text_view"
+					android:id="@+id/patient_name_edit"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_marginEnd="@dimen/doctors_settings_activity_text_text_view_margin_end"
@@ -108,7 +108,7 @@
 					tools:layout_editor_absoluteY="23dp"/>
 			
 				<TextView
-					android:id="@+id/text_two_text_view"
+					android:id="@+id/patient_severity_edit"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_marginEnd="@dimen/doctors_settings_activity_text_two_text_view_margin_end"

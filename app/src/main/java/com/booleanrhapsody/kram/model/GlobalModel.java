@@ -3,6 +3,7 @@ package com.booleanrhapsody.kram.model;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
 
 public class GlobalModel {
 
@@ -18,9 +19,32 @@ public class GlobalModel {
 
 
     private FirebaseAuth firebaseAuth;
-    private FirebaseFirestore firebaseFirestore;
+
+    public FirebaseFirestore getFirestore() {
+        return firestore;
+    }
+
+    private FirebaseFirestore firestore;
     private String userCategory;
 
+    public PatientModel getEditingPatient() {
+        return editingPatient;
+    }
+
+    public void setEditingPatient(PatientModel editingPatient) {
+        this.editingPatient = editingPatient;
+    }
+
+    public DoctorModel getEditingDoctor() {
+        return editingDoctor;
+    }
+
+    public void setEditingDoctor(DoctorModel editingDoctor) {
+        this.editingDoctor = editingDoctor;
+    }
+
+    private PatientModel editingPatient;
+    private DoctorModel editingDoctor;
 
     static {
         FirebaseFirestore.setLoggingEnabled(true);
@@ -28,7 +52,12 @@ public class GlobalModel {
 
     public void init() {
         firebaseAuth = FirebaseAuth.getInstance();
-        firebaseFirestore = FirebaseFirestore.getInstance();
+        firestore = FirebaseFirestore.getInstance();
+
+        FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
+                .setTimestampsInSnapshotsEnabled(true)
+                .build();
+        firestore.setFirestoreSettings(settings);
     }
 
     public FirebaseUser getCurrentUser() {

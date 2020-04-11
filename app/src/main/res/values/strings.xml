@@ -82,7 +82,7 @@
 	<string name="signup_activity_are_you_anurse_text_view_hint">Are you a nurse?</string>
 	<string name="signup_activity_welcome_text_view_hint">Welcome</string>
 	<string name="signup_activity_speciality_edit_text_hint">Speciality</string>
-	<string name="signup_activity_hospital_name_edit_text_hint">Hospital Name</string>
+	<string name="signup_activity_hospital_name_edit_text_hint">Hospital Code</string>
 	
 	<!-- Resources for MessageSevenViewHolder -->
 	<string name="message_seven_view_holder_name_text_view_hint">Vulcan</string>

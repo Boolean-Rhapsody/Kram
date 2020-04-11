@@ -8,6 +8,7 @@
 
 package com.booleanrhapsody.kram.fragment;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -24,12 +25,15 @@ import com.booleanrhapsody.kram.R;
 import com.booleanrhapsody.kram.activity.*;
 import com.booleanrhapsody.kram.adapter.NursePatientsActivityMessagesRecyclerViewAdapter;
 import com.booleanrhapsody.kram.databinding.NursePatientsActivityBinding;
+import com.booleanrhapsody.kram.model.GlobalModel;
 import com.booleanrhapsody.kram.model.PatientModel;
+import com.google.firebase.firestore.DocumentSnapshot;
 
 import java.util.*;
 
 
-public class NursePatientsActivity extends Fragment {
+public class NursePatientsActivity extends Fragment
+		implements NursePatientsActivityMessagesRecyclerViewAdapter.OnPatientSelectedListener {
 
 	private NursePatientsActivityMessagesRecyclerViewAdapter mAdapter;
 
@@ -81,17 +85,13 @@ public class NursePatientsActivity extends Fragment {
 	
 	public void onLeftItemPressed() {
 
-		PatientModel p = new PatientModel();
-		p.setName("Stephen King");
-		p.setSeverity(2);
-		PatientModel.add(p);
-
+		GlobalModel.getInstance().setEditingPatient(null);
 		this.startPatientDetailsActivity();
 	}
 	
 	public void init() {
 
-		this.mAdapter = new NursePatientsActivityMessagesRecyclerViewAdapter(PatientModel.getPatientsQuery());
+		this.mAdapter = new NursePatientsActivityMessagesRecyclerViewAdapter(PatientModel.getPatientsQuery(), this);
 
 		// Configure Messages component
 		binding.messagesRecyclerView.setLayoutManager(new LinearLayoutManager(this.getContext(), LinearLayoutManager.VERTICAL, false));
@@ -119,5 +119,16 @@ public class NursePatientsActivity extends Fragment {
 		if (mAdapter != null) {
 			mAdapter.stopListening();
 		}
+	}
+
+	@Override
+	public void onPatientSelected(DocumentSnapshot item) {
+
+		PatientModel patient = item.toObject(PatientModel.class);
+		GlobalModel.getInstance().setEditingPatient(patient);
+
+		Intent intent = PatientDetailsActivity.newIntent(this.getContext());
+		intent.putExtra("id", item.getId());
+		this.getActivity().startActivity(intent);
 	}
 }
