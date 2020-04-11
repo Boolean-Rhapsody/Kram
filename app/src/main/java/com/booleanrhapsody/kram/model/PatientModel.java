@@ -22,59 +22,39 @@ import java.util.List;
 @IgnoreExtraProperties
 public class PatientModel  {
 
+    static public String STATUS_WAIT = "2-waiting";
+    static public String STATUS_ASSIGNED = "1-assigned";
+    static public String STATUS_COMPLETED = "0-completed";
+
     private static final String TAG = "PatientModel";
 
     private static final CollectionReference patientsCollection =
             FirebaseFirestore.getInstance().collection("patients");
 
     private static final Query patientsQuery =
-            patientsCollection.orderBy("timestamp", Query.Direction.DESCENDING).limit(50);
+            patientsCollection.whereGreaterThanOrEqualTo("status", PatientModel.STATUS_COMPLETED)
+                    .orderBy("status", Query.Direction.DESCENDING)
+                    .orderBy("timestamp", Query.Direction.DESCENDING)
+                    .limit(50);
 
     private static List<PatientModel> patients;
 
-    public static void fetch() {
-        patientsCollection
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                Log.d(TAG, document.getId() + " => " + document.getData());
-                            }
-                        } else {
-                            Log.w(TAG, "Error getting documents.", task.getException());
-                        }
-                    }
-                });
+    public static  Task<QuerySnapshot> fetch() {
+        return patientsCollection.get();
     }
 
-    public static void save(PatientModel patient) {
+    public static Task<Void> save(PatientModel patient) {
 
-        if (patient.getId() != null) {
-            patientsCollection.document(patient.getId()).set(patient);
-        }
+        return patientsCollection.document(patient.getId()).set(patient);
     }
 
-    public static void add(PatientModel patient) {
-        patientsCollection.
-        add(patient)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.w(TAG, "Error adding document", e);
-                    }
-                });
+    public static Task<DocumentReference> add(PatientModel patient) {
+        return patientsCollection.add(patient);
     }
 
     private String name;
     private Integer severity;
+    private String status;
 
     private String id;
     private Date timeStamp;
@@ -91,6 +71,7 @@ public class PatientModel  {
         this.name = name;
         severity = message;
         this.id = uid;
+        this.status = STATUS_WAIT;
     }
 
     public static CollectionReference getPatientsCollection() {
@@ -100,6 +81,24 @@ public class PatientModel  {
     public static Query getPatientsQuery() {
         return patientsQuery;
     }
+
+    public String getHospital() {
+        return hospital;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setHospital(String hospital) {
+        this.hospital = hospital;
+    }
+
+    private String hospital;
 
     public String getName() {
         return name;

@@ -10,6 +10,7 @@ package com.booleanrhapsody.kram.fragment;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -25,6 +26,9 @@ import com.booleanrhapsody.kram.activity.*;
 import com.booleanrhapsody.kram.adapter.NurseDoctorsActivityMessagesRecyclerViewAdapter;
 import com.booleanrhapsody.kram.databinding.NurseDoctorsActivityBinding;
 import com.booleanrhapsody.kram.model.DoctorModel;
+import com.booleanrhapsody.kram.model.GlobalModel;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 
 import java.util.*;
 
@@ -94,12 +98,7 @@ public class NurseDoctorsActivity extends Fragment {
 	
 	private void startWelcomeActivity() {
 
-		DoctorModel p = new DoctorModel();
-		p.setName("DrJohn King");
-		p.setSpecialty("Ortho");
-		DoctorModel.add(p);
-
-		this.getActivity().startActivity(WelcomeActivity.newIntent(this.getContext()));
+		GlobalModel.getInstance().logoutUser(this.getActivity());
 	}
 
 	@Override

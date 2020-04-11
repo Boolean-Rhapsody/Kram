@@ -92,7 +92,7 @@
 				android:id="@+id/your_patient_id_edit_text"
 				android:layout_width="@dimen/login_activity_your_patient_id_edit_text_width"
 				android:layout_height="@dimen/login_activity_your_patient_id_edit_text_height"
-				android:layout_marginTop="@dimen/login_activity_your_patient_id_edit_text_margin_top"
+				android:layout_marginBottom="48dp"
 				android:alpha="1"
 				android:background="@color/login_activity_your_patient_id_edit_text_background_color"
 				android:fontFamily="@font/font_lato_regular"
@@ -103,6 +103,7 @@
 				android:textColor="@color/login_activity_your_patient_id_edit_text_text_color"
 				android:textColorHint="@color/color_hint_text"
 				android:textSize="@dimen/login_activity_your_patient_id_edit_text_text_size"
+				app:layout_constraintBottom_toBottomOf="parent"
 				app:layout_constraintLeft_toLeftOf="parent"
 				app:layout_constraintTop_toBottomOf="@+id/separator_constraint_layout" />
 		</android.support.constraint.ConstraintLayout>

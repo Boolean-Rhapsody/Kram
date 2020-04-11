@@ -8,6 +8,7 @@
 
 package com.booleanrhapsody.kram.fragment;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -58,7 +59,7 @@ public class DoctorsPatientsActivity extends Fragment
 	
 	public void init() {
 
-		this.mAdapter = new DoctorsPatientsActivityMessagesRecyclerViewAdapter(PatientModel.getPatientsQuery());
+		this.mAdapter = new DoctorsPatientsActivityMessagesRecyclerViewAdapter(PatientModel.getPatientsQuery(), this);
 		// Configure Messages component
 		binding.messagesRecyclerView.setLayoutManager(new LinearLayoutManager(this.getContext(), LinearLayoutManager.VERTICAL, false));
 		binding.messagesRecyclerView.setAdapter(this.mAdapter);
@@ -86,8 +87,12 @@ public class DoctorsPatientsActivity extends Fragment
 	public void onPatientSelected(DocumentSnapshot item) {
 
 		PatientModel patient = item.toObject(PatientModel.class);
+		patient.setId(item.getId());
 		GlobalModel.getInstance().setEditingPatient(patient);
 
-		this.getActivity().startActivity(PatientDetailsActivity.newIntent(this.getContext()));
+		Intent intent = PatientDetailsActivity.newIntent(this.getContext());
+		intent.putExtra("id", item.getId());
+		this.getActivity().startActivity(intent);
+
 	}
 }

@@ -1,5 +1,14 @@
 package com.booleanrhapsody.kram.model;
 
+import android.app.Activity;
+import android.content.Context;
+import android.support.annotation.NonNull;
+
+import com.booleanrhapsody.kram.activity.WelcomeActivity;
+import com.booleanrhapsody.kram.fragment.NurseDoctorsActivity;
+import com.firebase.ui.auth.AuthUI;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -7,12 +16,17 @@ import com.google.firebase.firestore.FirebaseFirestoreSettings;
 
 public class GlobalModel {
 
+    static public String CAT_PATIENT = "patient";
+    static public String CAT_DOCTOR = "doctor";
+    static public String CAT_NURSE = "nurse";
+
     static private GlobalModel instance = null;
 
     public static GlobalModel getInstance() {
 
         if (null == instance) {
             instance = new GlobalModel();
+            instance.init();
         }
         return instance;
     }
@@ -45,6 +59,9 @@ public class GlobalModel {
 
     private PatientModel editingPatient;
     private DoctorModel editingDoctor;
+    private NurseModel editingNurse;
+
+    private String userHospital;
 
     static {
         FirebaseFirestore.setLoggingEnabled(true);
@@ -58,6 +75,8 @@ public class GlobalModel {
                 .setTimestampsInSnapshotsEnabled(true)
                 .build();
         firestore.setFirestoreSettings(settings);
+
+        userHospital = "100";
     }
 
     public FirebaseUser getCurrentUser() {
@@ -65,6 +84,21 @@ public class GlobalModel {
         return currentUser;
     }
 
+    public NurseModel getEditingNurse() {
+        return editingNurse;
+    }
+
+    public void setEditingNurse(NurseModel editingNurse) {
+        this.editingNurse = editingNurse;
+    }
+
+    public String getUserHospital() {
+        return userHospital;
+    }
+
+    public void setUserHospital(String userHospital) {
+        this.userHospital = userHospital;
+    }
 
     public String getUserCategory() {
         return userCategory;
@@ -74,4 +108,17 @@ public class GlobalModel {
         this.userCategory = userCategory;
     }
 
+    public Task<Void> logoutUser(Activity activity) {
+
+        Task<Void> task = AuthUI.getInstance().signOut(activity);
+        task.addOnCompleteListener(new OnCompleteListener<Void>() {
+            public void onComplete(@NonNull Task<Void> task) {
+                // ...
+                activity.startActivity(
+                        WelcomeActivity.newIntent(activity));
+            }
+        });
+
+        return task;
+    }
 }

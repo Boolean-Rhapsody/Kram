@@ -14,6 +14,7 @@ import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.graphics.PointF;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -24,6 +25,8 @@ import com.booleanrhapsody.kram.R;
 import com.booleanrhapsody.kram.databinding.PatientDetailsActivityBinding;
 import com.booleanrhapsody.kram.model.GlobalModel;
 import com.booleanrhapsody.kram.model.PatientModel;
+
+import java.util.Date;
 
 import io.supernova.uitoolkit.drawable.LinearGradientDrawable;
 
@@ -82,6 +85,16 @@ public class PatientDetailsActivity extends AppCompatActivity {
 			binding.patientDoctorName.setText(p.getDoctor());
 		}
 
+		String userCategory = GlobalModel.getInstance().getUserCategory();
+		if (userCategory == GlobalModel.CAT_DOCTOR) {
+			binding.buttonPatientAssign.setVisibility(View.VISIBLE);
+			binding.buttonPatientMarkDone.setVisibility(View.VISIBLE);
+		}
+		else if (userCategory == GlobalModel.CAT_NURSE) {
+			binding.buttonPatientAssign.setVisibility(View.INVISIBLE);
+			binding.buttonPatientMarkDone.setVisibility(View.INVISIBLE);
+		}
+
 	}
 	
 	public void setupToolbar() {
@@ -99,6 +112,7 @@ public class PatientDetailsActivity extends AppCompatActivity {
 			PatientModel p = new PatientModel();
 			p.setName(binding.patientNameEdit.getText().toString());
 			p.setSeverity(Integer.valueOf(binding.patientSeverityEdit.getText().toString()));
+			p.setHospital(GlobalModel.getInstance().getUserHospital());
 			PatientModel.add(p);
 		}
 		else {
@@ -110,4 +124,37 @@ public class PatientDetailsActivity extends AppCompatActivity {
 		this.finish();
 	}
 
+	public void onClickAssignPatient (View v) {
+
+		Snackbar.make(findViewById(android.R.id.content), "Assigned patient",
+				Snackbar.LENGTH_SHORT).show();
+
+		PatientModel p = GlobalModel.getInstance().getEditingPatient();
+		p.setDoctor(GlobalModel.getInstance().getCurrentUser().getEmail());
+		p.setStartTime(new Date());
+		p.setStatus(PatientModel.STATUS_ASSIGNED);
+		p.setHospital(GlobalModel.getInstance().getUserHospital());
+		PatientModel.save(p);
+
+		this.finish();
+	}
+
+	public void onClickDonePatient (View v) {
+
+		Snackbar.make(findViewById(android.R.id.content), "Marked done patient",
+				Snackbar.LENGTH_SHORT).show();
+
+		PatientModel p = GlobalModel.getInstance().getEditingPatient();
+		p.setDoctor(GlobalModel.getInstance().getCurrentUser().getEmail());
+		p.setStopTime(new Date());
+		p.setStatus(PatientModel.STATUS_COMPLETED);
+		p.setHospital(GlobalModel.getInstance().getUserHospital());
+		PatientModel.save(p);
+
+		this.finish();
+	}
+
+	public void onClickSavePatient (View v) {
+		onLeftItemPressed();
+	}
 }
