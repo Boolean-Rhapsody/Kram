@@ -24,11 +24,15 @@ import com.booleanrhapsody.kram.R;
 import com.booleanrhapsody.kram.activity.*;
 import com.booleanrhapsody.kram.adapter.NurseDoctorsActivityMessagesRecyclerViewAdapter;
 import com.booleanrhapsody.kram.databinding.NurseDoctorsActivityBinding;
+import com.booleanrhapsody.kram.model.DoctorModel;
+
 import java.util.*;
 
 
 public class NurseDoctorsActivity extends Fragment {
-	
+
+	private NurseDoctorsActivityMessagesRecyclerViewAdapter mAdapter;
+
 	public static NurseDoctorsActivity newInstance() {
 	
 		NurseDoctorsActivity fragment = new NurseDoctorsActivity();
@@ -38,7 +42,7 @@ public class NurseDoctorsActivity extends Fragment {
 	}
 	
 	private NurseDoctorsActivityBinding binding;
-	protected NurseDoctorsActivity() {
+	public NurseDoctorsActivity() {
 		super();
 		setHasOptionsMenu(true);
 	}
@@ -81,14 +85,38 @@ public class NurseDoctorsActivity extends Fragment {
 	}
 	
 	public void init() {
-	
+
+		this.mAdapter = new NurseDoctorsActivityMessagesRecyclerViewAdapter(DoctorModel.getDoctorsQuery());
 		// Configure Messages component
 		binding.messagesRecyclerView.setLayoutManager(new LinearLayoutManager(this.getContext(), LinearLayoutManager.VERTICAL, false));
-		binding.messagesRecyclerView.setAdapter(new NurseDoctorsActivityMessagesRecyclerViewAdapter());
+		binding.messagesRecyclerView.setAdapter(this.mAdapter);
 	}
 	
 	private void startWelcomeActivity() {
-	
+
+		DoctorModel p = new DoctorModel();
+		p.setName("DrJohn King");
+		p.setSpecialty("Ortho");
+		DoctorModel.add(p);
+
 		this.getActivity().startActivity(WelcomeActivity.newIntent(this.getContext()));
+	}
+
+	@Override
+	public void onStart() {
+		super.onStart();
+
+		// Start listening for Firestore updates
+		if (mAdapter != null) {
+			mAdapter.startListening();
+		}
+	}
+
+	@Override
+	public void onStop() {
+		super.onStop();
+		if (mAdapter != null) {
+			mAdapter.stopListening();
+		}
 	}
 }

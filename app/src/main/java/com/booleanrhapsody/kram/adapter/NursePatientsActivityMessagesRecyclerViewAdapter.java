@@ -27,7 +27,8 @@ import java.util.List;
 //public abstract class FirestoreAdapter<VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<VH>
 //public class RestaurantAdapter extends FirestoreAdapter<RestaurantAdapter.ViewHolder> {
 //FirestoreAdapter<NursePatientsActivityMessagesRecyclerViewAdapter.MessageViewHolder>
-public class NursePatientsActivityMessagesRecyclerViewAdapter extends FirestoreAdapter<NursePatientsActivityMessagesRecyclerViewAdapter.MessageViewHolder> {
+public class NursePatientsActivityMessagesRecyclerViewAdapter extends
+		FirestoreAdapter<NursePatientsActivityMessagesRecyclerViewAdapter.MessageViewHolder> {
 
 	public interface OnPatientSelectedListener {
 
