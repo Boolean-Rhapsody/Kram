@@ -22,6 +22,8 @@ import android.view.ViewGroup;
 import com.booleanrhapsody.kram.R;
 import com.booleanrhapsody.kram.activity.*;
 import com.booleanrhapsody.kram.databinding.PatientHomeActivityBinding;
+import com.booleanrhapsody.kram.model.GlobalModel;
+
 import java.util.*;
 
 
@@ -36,7 +38,7 @@ public class PatientHomeActivity extends Fragment {
 	}
 	
 	private PatientHomeActivityBinding binding;
-	protected PatientHomeActivity() {
+	public PatientHomeActivity() {
 		super();
 		setHasOptionsMenu(true);
 	}
@@ -83,7 +85,7 @@ public class PatientHomeActivity extends Fragment {
 	}
 	
 	private void startWelcomeActivity() {
-	
-		this.getActivity().startActivity(WelcomeActivity.newIntent(this.getContext()));
+
+		GlobalModel.getInstance().logoutUser(this.getActivity());
 	}
 }
