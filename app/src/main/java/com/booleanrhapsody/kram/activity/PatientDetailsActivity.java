@@ -113,6 +113,7 @@ public class PatientDetailsActivity extends AppCompatActivity {
 			p.setName(binding.patientNameEdit.getText().toString());
 			p.setSeverity(Integer.valueOf(binding.patientSeverityEdit.getText().toString()));
 			p.setHospital(GlobalModel.getInstance().getUserHospital());
+			p.setStatus(PatientModel.STATUS_WAIT);
 			PatientModel.add(p);
 		}
 		else {
