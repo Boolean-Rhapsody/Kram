@@ -118,6 +118,16 @@ public class PatientHomeActivity extends Fragment implements  PatientChangeListe
 	public void onPatientChanged() {
 
 		Log.i(TAG, "onPatientChanged");
+
+		String queueSize = String.valueOf(GlobalModel.getInstance().getPatientChangeListener().getPatientsBeforeMe());
+		binding.textPatientInfoQueueSize.setText(queueSize);
+
+		String myWaitTime = String.valueOf(GlobalModel.getInstance().getPatientChangeListener().getMyWaitTime());
+		binding.textPatientInfoExpectedWait.setText(myWaitTime);
+
+		String otherDetails = String.valueOf(GlobalModel.getInstance().getPatientChangeListener().getPatientsInProgress());
+		binding.textPatientInfoDetails.setText(otherDetails);
+
 		Snackbar.make(this.getActivity().findViewById(android.R.id.content), "Some patient was updated",
 				Snackbar.LENGTH_SHORT).show();
 	}

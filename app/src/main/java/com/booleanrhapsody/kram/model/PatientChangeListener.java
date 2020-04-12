@@ -37,6 +37,22 @@ public class PatientChangeListener implements EventListener<QuerySnapshot> {
     private ArrayList<DocumentSnapshot> documentSnapshots = new ArrayList<>();
 
 
+    public int getPatientsBeforeMe() {
+        return patientsBeforeMe;
+    }
+
+    public int getPatientsInProgress() {
+        return patientsInProgress;
+    }
+
+    public int getMyWaitTime() {
+        return myWaitTime;
+    }
+
+    private int patientsBeforeMe = 0;
+    private int patientsInProgress = 0;
+    private int myWaitTime = 0;
+
     public PatientChangeListener(Query q) {
         this.query = q;
     }
@@ -48,11 +64,45 @@ public class PatientChangeListener implements EventListener<QuerySnapshot> {
 
     public void recalculateStats() {
 
+        int patientsBeforeMe = 0;
+        boolean foundCurrentPatient = false;
+
+        int patientsInProgress = 0;
+
+        int myWaitTime = 0;
+
+        PatientModel currentPatient = GlobalModel.getInstance().getEditingPatient();
+        if (currentPatient == null) {
+            Log.w(TAG, "No valid current patient found, no stats");
+            return;
+        }
+
         for(DocumentSnapshot snapshot: this.documentSnapshots) {
 
             PatientModel patient = snapshot.toObject(PatientModel.class);
+            if (patient.getId() == null) {
+                patient.setId(snapshot.getId());
+            }
 
+            Log.i("Recalc stats: patient= ", patient.toString());
+
+            if (patient.getId() == currentPatient.getId()) {
+                foundCurrentPatient = true;
+            }
+            if (!foundCurrentPatient && patient.getStatus() == PatientModel.STATUS_WAIT) {
+                patientsBeforeMe++;
+            }
+
+            if (patient.getStatus() == PatientModel.STATUS_ASSIGNED) {
+                patientsInProgress++;
+            }
         }
+
+        myWaitTime = patientsBeforeMe * 10;
+
+        this.patientsBeforeMe = patientsBeforeMe;
+        this.patientsInProgress = patientsInProgress;
+        this.myWaitTime = myWaitTime;
     }
 
     @Override

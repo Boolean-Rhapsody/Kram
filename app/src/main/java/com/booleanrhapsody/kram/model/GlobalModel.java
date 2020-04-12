@@ -17,6 +17,10 @@ import com.google.firebase.firestore.Query;
 
 public class GlobalModel {
 
+    static {
+        //FirebaseFirestore.setLoggingEnabled(true);
+    }
+
     static public String CAT_PATIENT = "patient";
     static public String CAT_DOCTOR = "doctor";
     static public String CAT_NURSE = "nurse";
@@ -44,6 +48,10 @@ public class GlobalModel {
     private FirebaseFirestore firestore;
     private String userCategory;
 
+    public PatientChangeListener getPatientChangeListener() {
+        return patientChangeListener;
+    }
+
     public PatientModel getEditingPatient() {
         return editingPatient;
     }
@@ -66,9 +74,6 @@ public class GlobalModel {
 
     private String userHospital;
 
-    static {
-        FirebaseFirestore.setLoggingEnabled(true);
-    }
 
     public void init() {
         firebaseAuth = FirebaseAuth.getInstance();
