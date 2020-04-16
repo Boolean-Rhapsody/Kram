@@ -84,12 +84,13 @@ public class PatientChangeListener implements EventListener<QuerySnapshot> {
                 patient.setId(snapshot.getId());
             }
 
-            Log.i("Recalc stats: patient= ", patient.toString());
+            //Log.i("Recalc stats: patient= ", patient.toString());
+            //Log.i("Comparing:", currentPatient.getId() + ", " + patient.getId());
 
-            if (patient.getId() == currentPatient.getId()) {
+            if (patient.getId().equals(currentPatient.getId())) {
                 foundCurrentPatient = true;
             }
-            if (!foundCurrentPatient && patient.getStatus() == PatientModel.STATUS_WAIT) {
+            if (!foundCurrentPatient && patient.getStatus().equals(PatientModel.STATUS_WAIT)) {
                 patientsBeforeMe++;
             }
 
@@ -97,6 +98,7 @@ public class PatientChangeListener implements EventListener<QuerySnapshot> {
                 patientsInProgress++;
             }
         }
+        Log.i(TAG, "Stats summary: before me" +  String.valueOf(patientsBeforeMe) + ", " +  String.valueOf(patientsInProgress));
 
         myWaitTime = patientsBeforeMe * 10;
 
