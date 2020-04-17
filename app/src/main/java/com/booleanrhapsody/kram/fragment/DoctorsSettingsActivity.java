@@ -22,6 +22,7 @@ import android.view.ViewGroup;
 import com.booleanrhapsody.kram.R;
 import com.booleanrhapsody.kram.activity.*;
 import com.booleanrhapsody.kram.databinding.DoctorsSettingsActivityBinding;
+import com.booleanrhapsody.kram.model.DoctorModel;
 import com.booleanrhapsody.kram.model.GlobalModel;
 
 import java.util.*;
@@ -83,7 +84,11 @@ public class DoctorsSettingsActivity extends Fragment {
 	}
 	
 	public void onSlideValueChanged() {
-	
+
+		DoctorModel doc = GlobalModel.getInstance().getEditingDoctor();
+		doc.setOnCall(binding.slideTwoSwitch.isChecked());
+
+		DoctorModel.save(doc);
 	}
 	
 	public void onGroupPressed() {
@@ -100,9 +105,11 @@ public class DoctorsSettingsActivity extends Fragment {
 		// Configure Slide component
 		binding.slideSwitch.setOnClickListener((view) -> {
 	this.onSlideTwoValueChanged();
+
+
 });
 		
-		// Configure Slide component
+		// on call switch
 		binding.slideTwoSwitch.setOnClickListener((view) -> {
 	this.onSlideValueChanged();
 });

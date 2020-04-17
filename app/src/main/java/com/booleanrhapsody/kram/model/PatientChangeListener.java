@@ -11,6 +11,7 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Nullable;
@@ -86,6 +87,16 @@ public class PatientChangeListener implements EventListener<QuerySnapshot> {
 
             //Log.i("Recalc stats: patient= ", patient.toString());
             //Log.i("Comparing:", currentPatient.getId() + ", " + patient.getId());
+
+            long diffInMillies = Math.abs(new Date().getTime() - patient.getTimestamp().getTime());
+            if (diffInMillies > 45*60*1000) {
+                int newSeverity = patient.getSeverity() - 1;
+                if (newSeverity < 1) {
+                    newSeverity = 1;
+                }
+
+                patient.setSeverity(newSeverity);
+            }
 
             if (patient.getId().equals(currentPatient.getId())) {
                 foundCurrentPatient = true;
