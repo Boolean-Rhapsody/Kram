@@ -129,7 +129,7 @@
 					tools:layout_editor_absoluteY="29dp"/>
 			
 				<TextView
-					android:id="@+id/text_view_text_view"
+					android:id="@+id/textPatientInfoDetails"
 					android:layout_width="0dp"
 					android:layout_height="wrap_content"
 					android:layout_marginEnd="@dimen/patient_home_activity_text_view_text_view_margin_end"
@@ -171,12 +171,12 @@
 					app:layout_constraintHorizontal_weight="1"
 					app:layout_constraintLeft_toLeftOf="parent"
 					app:layout_constraintRight_toRightOf="parent"
-					app:layout_constraintTop_toBottomOf="@+id/text_view_two_text_view"
+					app:layout_constraintTop_toBottomOf="@+id/textPatientInfoExpectedWait"
 					tools:layout_editor_absoluteX="0dp"
 					tools:layout_editor_absoluteY="29dp"/>
 			
 				<TextView
-					android:id="@+id/text_view_two_text_view"
+					android:id="@+id/textPatientInfoExpectedWait"
 					android:layout_width="0dp"
 					android:layout_height="wrap_content"
 					android:layout_marginEnd="@dimen/patient_home_activity_text_view_two_text_view_margin_end"
@@ -218,12 +218,12 @@
 					app:layout_constraintHorizontal_weight="1"
 					app:layout_constraintLeft_toLeftOf="parent"
 					app:layout_constraintRight_toRightOf="parent"
-					app:layout_constraintTop_toBottomOf="@+id/text_view_three_text_view"
+					app:layout_constraintTop_toBottomOf="@+id/textPatientInfoQueueSize"
 					tools:layout_editor_absoluteX="0dp"
 					tools:layout_editor_absoluteY="29dp"/>
 			
 				<TextView
-					android:id="@+id/text_view_three_text_view"
+					android:id="@+id/textPatientInfoQueueSize"
 					android:layout_width="0dp"
 					android:layout_height="wrap_content"
 					android:layout_marginEnd="@dimen/patient_home_activity_text_view_three_text_view_margin_end"

@@ -27,7 +27,8 @@ import java.util.List;
 //public abstract class FirestoreAdapter<VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<VH>
 //public class RestaurantAdapter extends FirestoreAdapter<RestaurantAdapter.ViewHolder> {
 //FirestoreAdapter<NursePatientsActivityMessagesRecyclerViewAdapter.MessageViewHolder>
-public class NursePatientsActivityMessagesRecyclerViewAdapter extends FirestoreAdapter<NursePatientsActivityMessagesRecyclerViewAdapter.MessageViewHolder> {
+public class NursePatientsActivityMessagesRecyclerViewAdapter extends
+		FirestoreAdapter<NursePatientsActivityMessagesRecyclerViewAdapter.MessageViewHolder> {
 
 	public interface OnPatientSelectedListener {
 
@@ -78,7 +79,7 @@ public class NursePatientsActivityMessagesRecyclerViewAdapter extends FirestoreA
 
 
 			binding.nameTextView.setText(patient.getName());
-			binding.theNeedsOfTheFewTextView.setText(patient.getSeverity());
+			binding.theNeedsOfTheFewTextView.setText(String.valueOf(patient.getSeverity()));
 
 			itemView.setOnClickListener(new View.OnClickListener() {
 				@Override

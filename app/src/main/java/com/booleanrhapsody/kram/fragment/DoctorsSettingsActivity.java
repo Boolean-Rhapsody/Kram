@@ -22,6 +22,8 @@ import android.view.ViewGroup;
 import com.booleanrhapsody.kram.R;
 import com.booleanrhapsody.kram.activity.*;
 import com.booleanrhapsody.kram.databinding.DoctorsSettingsActivityBinding;
+import com.booleanrhapsody.kram.model.GlobalModel;
+
 import java.util.*;
 
 
@@ -36,7 +38,7 @@ public class DoctorsSettingsActivity extends Fragment {
 	}
 	
 	private DoctorsSettingsActivityBinding binding;
-	protected DoctorsSettingsActivity() {
+	public DoctorsSettingsActivity() {
 		super();
 		setHasOptionsMenu(true);
 	}
@@ -89,8 +91,8 @@ public class DoctorsSettingsActivity extends Fragment {
 	}
 	
 	public void onLeftItemPressed() {
-	
-		this.startWelcomeActivity();
+
+		GlobalModel.getInstance().logoutUser(this.getActivity());
 	}
 	
 	public void init() {
@@ -107,7 +109,7 @@ public class DoctorsSettingsActivity extends Fragment {
 	}
 	
 	private void startWelcomeActivity() {
-	
-		this.getActivity().startActivity(WelcomeActivity.newIntent(this.getContext()));
+
+		GlobalModel.getInstance().logoutUser(this.getActivity());
 	}
 }

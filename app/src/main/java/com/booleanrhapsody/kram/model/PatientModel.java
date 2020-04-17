@@ -22,53 +22,41 @@ import java.util.List;
 @IgnoreExtraProperties
 public class PatientModel  {
 
+    static public String STATUS_WAIT = "2-waiting";
+    static public String STATUS_ASSIGNED = "1-assigned";
+    static public String STATUS_COMPLETED = "0-completed";
+
     private static final String TAG = "PatientModel";
 
     private static final CollectionReference patientsCollection =
             FirebaseFirestore.getInstance().collection("patients");
 
     private static final Query patientsQuery =
-            patientsCollection.orderBy("timestamp", Query.Direction.DESCENDING).limit(50);
+            patientsCollection.whereGreaterThanOrEqualTo("status", PatientModel.STATUS_COMPLETED)
+                    .orderBy("status", Query.Direction.DESCENDING)
+                    .orderBy("timestamp", Query.Direction.ASCENDING)
+                    .limit(50);
 
     private static List<PatientModel> patients;
 
-    public static void fetch() {
-        patientsCollection
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                Log.d(TAG, document.getId() + " => " + document.getData());
-                            }
-                        } else {
-                            Log.w(TAG, "Error getting documents.", task.getException());
-                        }
-                    }
-                });
+    public static  Task<QuerySnapshot> fetch() {
+        return patientsCollection.get();
     }
 
-    public static void add(PatientModel patient) {
-        patientsCollection.
-        add(patient)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.w(TAG, "Error adding document", e);
-                    }
-                });
+    public static Task<Void> save(PatientModel patient) {
+
+        return patientsCollection.document(patient.getId()).set(patient);
+    }
+
+    public static Task<DocumentReference> add(PatientModel patient) {
+        return patientsCollection.add(patient);
     }
 
     private String name;
     private Integer severity;
-    private String uid;
+    private String status;
+
+    private String id;
     private Date timeStamp;
 
     private Date startTime;
@@ -82,7 +70,8 @@ public class PatientModel  {
     public PatientModel(String name, Integer message, String uid) {
         this.name = name;
         severity = message;
-        this.uid = uid;
+        this.id = uid;
+        this.status = STATUS_WAIT;
     }
 
     public static CollectionReference getPatientsCollection() {
@@ -92,6 +81,24 @@ public class PatientModel  {
     public static Query getPatientsQuery() {
         return patientsQuery;
     }
+
+    public String getHospital() {
+        return hospital;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setHospital(String hospital) {
+        this.hospital = hospital;
+    }
+
+    private String hospital;
 
     public String getName() {
         return name;
@@ -109,12 +116,12 @@ public class PatientModel  {
         severity = message;
     }
 
-    public String getUid() {
-        return uid;
+    public String getId() {
+        return id;
     }
 
-    public void setUid(String uid) {
-        this.uid = uid;
+    public void setId(String id) {
+        this.id = id;
     }
 
     @ServerTimestamp
@@ -158,7 +165,7 @@ public class PatientModel  {
         PatientModel doctor = (PatientModel) o;
 
         return timeStamp.equals(doctor.timeStamp)
-                && uid.equals(doctor.uid)
+                && id.equals(doctor.id)
                 && (name == null ? doctor.name == null : name.equals(doctor.name))
                 && (severity == null ? doctor.severity == null : severity.equals(doctor.severity));
     }
@@ -167,7 +174,7 @@ public class PatientModel  {
     public int hashCode() {
         int result = name == null ? 0 : name.hashCode();
         result = 31 * result + (severity == null ? 0 : severity.hashCode());
-        result = 31 * result + uid.hashCode();
+        result = 31 * result + id.hashCode();
         result = 31 * result + timeStamp.hashCode();
         return result;
     }
@@ -177,7 +184,7 @@ public class PatientModel  {
         return "Patient{" +
                 "Name='" + name + '\'' +
                 ", Severity='" + severity + '\'' +
-                ", Uid='" + uid + '\'' +
+                ", Uid='" + id + '\'' +
                 ", Timestamp=" + timeStamp +
                 '}';
     }

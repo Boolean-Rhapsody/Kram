@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.booleanrhapsody.kram.R;
 import com.booleanrhapsody.kram.databinding.WelcomeActivityBinding;
+import com.booleanrhapsody.kram.model.GlobalModel;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -43,8 +44,6 @@ public class WelcomeActivity extends AppCompatActivity {
 	int RC_SIGN_IN = 100;
 
 	private FirebaseAuth mAuth;
-
-	private String userCategory;
 
 	public static Intent newIntent(Context context) {
 	
@@ -98,35 +97,25 @@ public class WelcomeActivity extends AppCompatActivity {
 	
 	public void onNurseLoginButtonPressed() {
 
-		this.userCategory = "nurse";
+		GlobalModel.getInstance().setUserCategory(GlobalModel.CAT_NURSE);
 		this.startFirebaseLoginActivity();
 	}
 	
 	public void onDoctorLoginButtonPressed() {
 
-		this.userCategory = "doctor";
+		GlobalModel.getInstance().setUserCategory(GlobalModel.CAT_DOCTOR);
 		this.startFirebaseLoginActivity();
 	}
 	
 	public void onPatientLoginButtonPressed() {
 
-		this.userCategory = "patient";
+		GlobalModel.getInstance().setUserCategory(GlobalModel.CAT_PATIENT);
 		this.startFirebaseAnonymousLoginActivity();
 	}
 	
 	private void startPatientLoginActivity() {
 	
 		this.startActivity(LoginActivity.newIntent(this));
-	}
-	
-	private void startNurseHomeActivity() {
-	
-		this.startActivity(TabGroupOneActivity.newIntent(this));
-	}
-
-	private void startDoctorHomeActivity() {
-
-		this.startActivity(TabGroupThreeActivity.newIntent(this));
 	}
 
 	private void startSignupActivity() {
@@ -185,13 +174,9 @@ public class WelcomeActivity extends AppCompatActivity {
 			if (resultCode == RESULT_OK) {
 
 				// Successfully signed in
-				FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-				if (this.userCategory == "nurse") {
-					this.startNurseHomeActivity();
-				}
-				else if (this.userCategory == "doctor") {
-					this.startDoctorHomeActivity();
-				}
+				//FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+				this.startSignupActivity();
+
 				// ...
 			} else {
 				// Sign in failed. If response is null the user canceled the

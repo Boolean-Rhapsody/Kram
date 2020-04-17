@@ -66,6 +66,7 @@ public class TabGroupThreeActivity extends AppCompatActivity {
 		setSupportActionBar(binding.toolbar);
 		
 		// Additional Toolbar setup code can go here.
+		this.getSupportActionBar().setTitle("Home");
 	}
 	
 	public void onTabSelected(MenuItem menuItem) {
