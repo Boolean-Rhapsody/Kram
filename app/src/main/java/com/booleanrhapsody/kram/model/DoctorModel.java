@@ -40,6 +40,15 @@ public class DoctorModel  {
     private String specialty;
     private String id;
     private Date timeStamp;
+    private boolean onCall;
+
+    public boolean isOnCall() {
+        return onCall;
+    }
+
+    public void setOnCall(boolean onCall) {
+        this.onCall = onCall;
+    }
 
     public String getHospital() {
         return hospital;
