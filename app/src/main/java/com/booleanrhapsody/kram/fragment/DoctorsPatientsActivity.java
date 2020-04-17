@@ -24,6 +24,7 @@ import com.booleanrhapsody.kram.databinding.DoctorsPatientsActivityBinding;
 import com.booleanrhapsody.kram.model.GlobalModel;
 import com.booleanrhapsody.kram.model.PatientModel;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.Query;
 
 import java.util.*;
 
@@ -58,6 +59,13 @@ public class DoctorsPatientsActivity extends Fragment
 	}
 	
 	public void init() {
+
+		Query q = PatientModel.getPatientsCollection()
+				.whereGreaterThan("status", PatientModel.STATUS_ASSIGNED)
+				.orderBy("status", Query.Direction.DESCENDING)
+				.orderBy("severity", Query.Direction.ASCENDING)
+				.orderBy("timestamp", Query.Direction.DESCENDING)
+				.limit(50);
 
 		this.mAdapter = new DoctorsPatientsActivityMessagesRecyclerViewAdapter(PatientModel.getPatientsQuery(), this);
 		// Configure Messages component

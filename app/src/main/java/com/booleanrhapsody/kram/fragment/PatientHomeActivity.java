@@ -101,6 +101,9 @@ public class PatientHomeActivity extends Fragment implements  PatientChangeListe
 		super.onStart();
 
 		Query q = PatientModel.getPatientsCollection()
+				.whereGreaterThan("status", PatientModel.STATUS_COMPLETED)
+				.orderBy("status", Query.Direction.DESCENDING)
+				.orderBy("severity", Query.Direction.ASCENDING)
 				.orderBy("timestamp", Query.Direction.DESCENDING)
 				.limit(50);
 		// Start listening for Firestore updates
