@@ -85,8 +85,8 @@ public class PatientChangeListener implements EventListener<QuerySnapshot> {
                 patient.setId(snapshot.getId());
             }
 
-            //Log.i("Recalc stats: patient= ", patient.toString());
-            //Log.i("Comparing:", currentPatient.getId() + ", " + patient.getId());
+            Log.i("Recalc stats: patient= ", patient.toString());
+            Log.i("Comparing:", currentPatient.getId() + ", " + patient.getId());
 
             long diffInMillies = Math.abs(new Date().getTime() - patient.getTimestamp().getTime());
             if (diffInMillies > 45*60*1000) {

@@ -9,6 +9,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.IgnoreExtraProperties;
 import com.google.firebase.firestore.Query;
@@ -50,6 +51,11 @@ public class PatientModel  {
 
     public static Task<DocumentReference> add(PatientModel patient) {
         return patientsCollection.add(patient);
+    }
+
+    public static Task<DocumentSnapshot> get(String id) {
+        DocumentReference docRef = patientsCollection.document(id);
+        return docRef.get();
     }
 
     private String name;
