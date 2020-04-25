@@ -35,7 +35,8 @@ public class PatientModel  {
     private static final Query patientsQuery =
             patientsCollection.whereGreaterThanOrEqualTo("status", PatientModel.STATUS_COMPLETED)
                     .orderBy("status", Query.Direction.DESCENDING)
-                    .orderBy("timestamp", Query.Direction.ASCENDING)
+                    .orderBy("severity", Query.Direction.ASCENDING)
+                    .orderBy("timestamp", Query.Direction.DESCENDING)
                     .limit(50);
 
     private static List<PatientModel> patients;

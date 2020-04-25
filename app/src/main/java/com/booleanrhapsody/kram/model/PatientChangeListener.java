@@ -20,7 +20,7 @@ public class PatientChangeListener implements EventListener<QuerySnapshot> {
 
     public interface OnPatientChangedListener {
 
-        void onPatientChanged();
+        public void onPatientChanged();
 
     }
 
