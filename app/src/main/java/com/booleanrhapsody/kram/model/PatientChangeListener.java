@@ -88,16 +88,28 @@ public class PatientChangeListener implements EventListener<QuerySnapshot> {
             Log.i("Recalc stats: patient= ", patient.toString());
             Log.i("Comparing:", currentPatient.getId() + ", " + patient.getId());
 
+            int severity = patient.getSeverity();
             long diffInMillies = Math.abs(new Date().getTime() - patient.getTimestamp().getTime());
-            if (diffInMillies > 45*60*1000) {
-                int newSeverity = patient.getSeverity() - 1;
-                if (newSeverity < 1) {
-                    newSeverity = 1;
-                }
+            int[] maxWaits = new int[] {5,15,30,60,120};
 
-                patient.setSeverity(newSeverity);
-                PatientModel.save(patient);
+            if (severity>1 && severity<5) {
+                int maxWait = maxWaits[severity - 1];
+
+                if (diffInMillies > maxWait*60*1000) {
+
+                    int newSeverity = severity - 1;
+                    if (newSeverity < 1) {
+                        newSeverity = 1;
+                    }
+
+                    patient.setSeverity(newSeverity);
+                    PatientModel.save(patient);
+
+                    Log.i(TAG, "Bumping patient severity, wait= " +  String.valueOf(diffInMillies/1000) +  "s (max=" +  String.valueOf(maxWait*60)+ ") for "  + patient.toString());
+
+                }
             }
+
 
             if (patient.getId().equals(currentPatient.getId())) {
                 foundCurrentPatient = true;

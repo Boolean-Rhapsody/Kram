@@ -33,12 +33,15 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.Query;
 
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 
 public class PatientHomeActivity extends Fragment implements  PatientChangeListener.OnPatientChangedListener {
 
 	private static final String TAG = "PatientHomeActivity";
+
+	private boolean active = true;
 
 	public static PatientHomeActivity newInstance() {
 	
@@ -90,10 +93,25 @@ public class PatientHomeActivity extends Fragment implements  PatientChangeListe
 	
 		this.startWelcomeActivity();
 	}
-	
+
+	public static final String DATE_FORMAT_1 = "hh:mm a";
+
 	public void init() {
 
-		binding.peterTextView.setText(GlobalModel.getInstance().getEditingPatient().getName());
+		PatientModel patient = GlobalModel.getInstance().getEditingPatient();
+
+		Log.i(TAG, "Patient Info= " + patient.toString());
+		binding.peterTextView.setText(patient.getName());
+
+		binding.textPatientInfoDetails.setText(String.valueOf(patient.getSeverity()));
+
+		SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT_1);
+		binding.waitingSince1012TextView.setText("Waiting since " + dateFormat.format(patient.getTimestamp()));
+
+		active = true;
+		if (patient.getStatus().equals(PatientModel.STATUS_COMPLETED)) {
+			active = false;
+		}
 	}
 	
 	private void startWelcomeActivity() {
@@ -105,21 +123,28 @@ public class PatientHomeActivity extends Fragment implements  PatientChangeListe
 	public void onStart() {
 		super.onStart();
 
-		Query q = PatientModel.getPatientsCollection()
-				.whereGreaterThan("status", PatientModel.STATUS_COMPLETED)
-				.orderBy("status", Query.Direction.DESCENDING)
-				.orderBy("severity", Query.Direction.ASCENDING)
-				.orderBy("timestamp", Query.Direction.DESCENDING)
-				.limit(50);
-		// Start listening for Firestore updates
-		GlobalModel.getInstance().startPatientListener(q, this);
+		if (active) {
+
+			Query q = PatientModel.getPatientsCollection()
+					.whereGreaterThan("status", PatientModel.STATUS_COMPLETED)
+					.orderBy("status", Query.Direction.DESCENDING)
+					.orderBy("severity", Query.Direction.ASCENDING)
+					.orderBy("timestamp", Query.Direction.DESCENDING)
+					.limit(50);
+			// Start listening for Firestore updates
+			GlobalModel.getInstance().startPatientListener(q, this);
+
+		}
+
 	}
 
 	@Override
 	public void onStop() {
 		super.onStop();
 
-		GlobalModel.getInstance().stopPatientListener();
+		if (active) {
+			GlobalModel.getInstance().stopPatientListener();
+		}
 	}
 
 	@Override
@@ -133,8 +158,8 @@ public class PatientHomeActivity extends Fragment implements  PatientChangeListe
 		String myWaitTime = String.valueOf(GlobalModel.getInstance().getPatientChangeListener().getMyWaitTime());
 		binding.textPatientInfoExpectedWait.setText(myWaitTime);
 
-		String otherDetails = String.valueOf(GlobalModel.getInstance().getPatientChangeListener().getPatientsInProgress());
-		binding.textPatientInfoDetails.setText(otherDetails);
+		//String otherDetails = String.valueOf(GlobalModel.getInstance().getPatientChangeListener().getPatientsInProgress());
+		//binding.textPatientInfoDetails.setText(otherDetails);
 
 		Snackbar.make(this.getActivity().findViewById(android.R.id.content), "Some patient was updated",
 				Snackbar.LENGTH_SHORT).show();
