@@ -33,7 +33,7 @@ public class PatientModel  {
             FirebaseFirestore.getInstance().collection("patients");
 
     private static final Query patientsQuery =
-            patientsCollection.whereGreaterThanOrEqualTo("status", PatientModel.STATUS_COMPLETED)
+            patientsCollection.whereGreaterThanOrEqualTo("status", PatientModel.STATUS_ASSIGNED)
                     .orderBy("status", Query.Direction.DESCENDING)
                     .orderBy("severity", Query.Direction.ASCENDING)
                     .orderBy("timestamp", Query.Direction.DESCENDING)
