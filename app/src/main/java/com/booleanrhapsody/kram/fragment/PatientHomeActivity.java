@@ -10,6 +10,7 @@ package com.booleanrhapsody.kram.fragment;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -42,6 +43,7 @@ public class PatientHomeActivity extends Fragment implements  PatientChangeListe
 	private static final String TAG = "PatientHomeActivity";
 
 	private boolean active = true;
+	private CountDownTimer countDownTimer;
 
 	public static PatientHomeActivity newInstance() {
 	
@@ -134,6 +136,20 @@ public class PatientHomeActivity extends Fragment implements  PatientChangeListe
 			// Start listening for Firestore updates
 			GlobalModel.getInstance().startPatientListener(q, this);
 
+			countDownTimer = new CountDownTimer(Long.MAX_VALUE, 30000) {
+
+				// This is called after every 30 sec interval.
+				public void onTick(long millisUntilFinished) {
+
+					Log.i(TAG, "Forcing recalc stats...");
+					GlobalModel.getInstance().getPatientChangeListener().recalculateStats();
+					PatientHomeActivity.this.updateStats();
+				}
+
+				public void onFinish() {
+					start();
+				}
+			}.start();
 		}
 
 	}
@@ -144,7 +160,18 @@ public class PatientHomeActivity extends Fragment implements  PatientChangeListe
 
 		if (active) {
 			GlobalModel.getInstance().stopPatientListener();
+			countDownTimer.cancel();
 		}
+	}
+
+	private void updateStats() {
+
+		String queueSize = String.valueOf(GlobalModel.getInstance().getPatientChangeListener().getPatientsBeforeMe());
+		binding.textPatientInfoQueueSize.setText(queueSize);
+
+		String myWaitTime = String.valueOf(GlobalModel.getInstance().getPatientChangeListener().getMyWaitTime());
+		binding.textPatientInfoExpectedWait.setText(myWaitTime);
+
 	}
 
 	@Override
@@ -152,11 +179,7 @@ public class PatientHomeActivity extends Fragment implements  PatientChangeListe
 
 		Log.i(TAG, "onPatientChanged");
 
-		String queueSize = String.valueOf(GlobalModel.getInstance().getPatientChangeListener().getPatientsBeforeMe());
-		binding.textPatientInfoQueueSize.setText(queueSize);
-
-		String myWaitTime = String.valueOf(GlobalModel.getInstance().getPatientChangeListener().getMyWaitTime());
-		binding.textPatientInfoExpectedWait.setText(myWaitTime);
+		this.updateStats();
 
 		//String otherDetails = String.valueOf(GlobalModel.getInstance().getPatientChangeListener().getPatientsInProgress());
 		//binding.textPatientInfoDetails.setText(otherDetails);
