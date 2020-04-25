@@ -96,6 +96,7 @@ public class PatientChangeListener implements EventListener<QuerySnapshot> {
                 }
 
                 patient.setSeverity(newSeverity);
+                PatientModel.save(patient);
             }
 
             if (patient.getId().equals(currentPatient.getId())) {
