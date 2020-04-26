@@ -81,8 +81,9 @@
 					tools:layout_editor_absoluteX="20dp"
 					tools:layout_editor_absoluteY="20dp"/>
 			</android.support.constraint.ConstraintLayout>
-		
+
 			<android.support.constraint.ConstraintLayout
+				android:visibility="gone"
 				android:id="@+id/ui_settings_cell_two_constraint_layout"
 				android:layout_width="0dp"
 				android:layout_height="@dimen/doctors_settings_activity_ui_settings_cell_two_constraint_layout_height"
