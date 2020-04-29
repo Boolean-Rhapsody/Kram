@@ -124,7 +124,7 @@ public class PatientChangeListener implements EventListener<QuerySnapshot> {
         }
         Log.i(TAG, "Stats summary: before me" +  String.valueOf(patientsBeforeMe) + ", " +  String.valueOf(patientsInProgress));
 
-        myWaitTime = patientsBeforeMe * 10;
+        myWaitTime = patientsBeforeMe * 1;
 
         this.patientsBeforeMe = patientsBeforeMe;
         this.patientsInProgress = patientsInProgress;
